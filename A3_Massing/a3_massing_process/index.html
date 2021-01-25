@@ -394,8 +394,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#noise" class="md-nav__link">
-    noise
+  <a href="#quietness" class="md-nav__link">
+    Quietness
   </a>
   
 </li>
@@ -451,8 +451,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#space-heights-to-stencils-tim-__-explain-different-stencil" class="md-nav__link">
-    Space heights to stencils Tim __&gt; explain different stencil
+  <a href="#space-heights-to-stencils" class="md-nav__link">
+    Space heights to stencils
   </a>
   
 </li>
@@ -464,22 +464,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#definitive-program-table-result-input-for-generative-relations-simulation" class="md-nav__link">
     Definitive program table result (input for generative relations simulation)
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-simulation" class="md-nav__link">
-    The simulation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -901,8 +894,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#noise" class="md-nav__link">
-    noise
+  <a href="#quietness" class="md-nav__link">
+    Quietness
   </a>
   
 </li>
@@ -958,8 +951,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#space-heights-to-stencils-tim-__-explain-different-stencil" class="md-nav__link">
-    Space heights to stencils Tim __&gt; explain different stencil
+  <a href="#space-heights-to-stencils" class="md-nav__link">
+    Space heights to stencils
   </a>
   
 </li>
@@ -971,22 +964,15 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#definitive-program-table-result-input-for-generative-relations-simulation" class="md-nav__link">
     Definitive program table result (input for generative relations simulation)
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#the-simulation" class="md-nav__link">
-    The simulation
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1005,7 +991,9 @@
                 
                 <p><img src="/img/logo/apidae_black.png" alt="collective" style="width:280px;"> 
 <center> <img src="/img/logo/apidae_with_text.png" alt="collective" style="width:600px;"> </center></p>
-<p><img src="/img/midterm/lowreshighres.png" style="width:280px;"></p>
+<p>A <img src="/img/midterm/lowreshighres.png" style="width:280px;">
+B <img src="https://cdn.discordapp.com/attachments/784009094474366977/803248102412779550/entrances.jpg" style="width:280px;">
+C <img src="https://cdn.discordapp.com/attachments/784009094474366977/803249271100014612/unknown.png" style="width:280px;"></p>
 <p>1<img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/0.0_basecontext.png?raw=true" style="width:280px;"></p>
 <p>2<img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/0.0_mesh.png?raw=true" style="width:280px;"></p>
 <p>3<img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/0.1_fulllattice.png?raw=true" style="width:280px;"></p>
@@ -1067,7 +1055,8 @@ For the sun and skylight values a similar argument could be made. For sake of th
         o   For the initial stage of storing data and removing voxels, solely using the influence of the context on the voxels to be blocking sun or skylight is sufficient. But for later stages when the building is generated (link to growth model), it would be an improvement to take the influence of light and shadow of voxels on each other. This would make that script even heavier, because it will have to calculate a light and shadow value each time it adds voxels. Besides that, a distinction should made with the outer voxels and inner voxels, to have some depth in the building. This depth should also be specified. To solve this, the growth model could be normally ran at first, and then after it has finished going through an evaluation loop to check the shadow and skylight blocking on the context.
     -   Removing bad voxels based on the shadow the context receives instead of the percentage of the time voxels cause shadow.<br />
         o   As of now a threshold is specified to remove voxels from the envelope based on the percentage of time these voxels cast shadow and block skylight from the context. However it would be an improvement if the voxels are removed based on the effect they have on the context. If a voxel casts a shadow on the context 50% of the time, this could mean that it causes it on a different building each time, meaning that although the voxel looks “bad”, the net result on the context is negligible. This calculation should also be taken into the growth model (link to growth model). This does mean this script will become even more heavy as it now has to calculate the shadow and skylight blocking each time it grows as well. To solve this, the growth model could be normally ran at first, and then after it has finished going through an evaluation loop to check the shadow and skylight blocking on the context. </p>
-<h2 id="noise">noise</h2>
+<h2 id="quietness">Quietness</h2>
+<p>To calculate the quietness noise in the building in relation to it’s context a path with noise points on it is loaded inside a script. Each voxel then calculates the distance from the voxel centroid towards the noise point. These distances are added together and converted into a ratio. This script is actually more about business on street level than about quietness, since it imports noise points and not actual decibels from areas. This does not matter too much, since noise could be filtered from a building by adding more insulation and the relative quietness matters more than the actual numbers in decibels.</p>
 <h2 id="greenery">greenery</h2>
 <p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/midterm/greenery.png?raw=true" style="width:280px;"></p>
 <h2 id="shafts">Shafts</h2>
@@ -1077,7 +1066,10 @@ For the sun and skylight values a similar argument could be made. For sake of th
 <p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/midterm/entrances.png?raw=true" style="width:280px;"></p>
 <h2 id="shortest-path">Shortest path</h2>
 <p>Not sure if needed, but perhaps explain the approach? (for example taking an entire line instead of only one voxel as an entrance)</p>
-<h2 id="kpis-to-agent-criteria">KPI's to agent criteria</h2>
+<hr />
+<p>NOTEPAD FOR ABM ETC</p>
+<hr />
+<h2 id="kpis-to-agent-criteria"><strong>KPI's to agent criteria</strong></h2>
 <p>explain what our criteria for the agents are and how they relate to the KPI's
 The following criteria have been implemented in the agent based simulation:</p>
 <ul>
@@ -1090,20 +1082,81 @@ The following criteria have been implemented in the agent based simulation:</p>
 <li>Greenery (Sustainability)</li>
 <li>Noise (Home quality) + (Collectivity) + (Sustainability)</li>
 </ul>
-<h2 id="configuring-spaces-to-workable-values">Configuring spaces to workable values</h2>
-<p>In order to implement the design criteria as mentioned before, those had to been converted to workable values. The values have been written for each space versus the criteria varying from 0 to 1. 0 indicates no connection, 1 indicates a strong connection. This has been applied for the following criteria: matrix based relations between spaces, sun access, entrance distance for public, housing, gym, parking and communal spaces, skyview, greenery and noise. </p>
+<h2 id="configuring-spaces-to-workable-values"><strong>Configuring spaces to workable values</strong></h2>
+<p>In order to implement the design criteria as mentioned before, those had to be converted to workable values. The values have been written for each space versus the criteria varying from 0 to 1. 0 indicates no connection, 1 indicates a strong connection (Referencing back to the matrix from A1_Configuring). This has been applied for the following criteria: matrix based relations between spaces, sun access, entrance distance for public, housing, gym, parking and communal spaces, skyview, greenery and noise. </p>
 <p>For the space heights and space areas a different approach had to be made since those are hardcoded criteria coming from the Program of Requirements. Hence, those explained in the next paragraph. </p>
-<h3 id="space-heights-to-stencils-tim-__-explain-different-stencil">Space heights to stencils Tim __&gt; explain different stencil</h3>
-<p>explain why we are using different stencils </p>
-<h3 id="space-areas-to-voxel-amounts">Space areas to voxel amounts</h3>
-<p>Based on the program of requirements, the required space sizes have been coverted to amount of necessary voxels to meet the area requirement and therefore fulfil it. This has been implemented in the script to maintain the desirded area per spaces, and has been used to limit the growth of the agents. </p>
-<p>Explain how script works.</p>
-<h3 id="definitive-program-table-result-input-for-generative-relations-simulation">Definitive program table result (input for generative relations simulation)</h3>
-<p>The following table has been made based on the agent criterias, this has been used in the definitive script for generating the agent based design. </p>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRBfjaAFNv4mAaDcMxI9AJf91QjGnhEDCYvvPLZC6GWHoceZO_pG81HI14bg5hD9g/pubhtml?gid=1256579589&amp;single=true&amp;widget=true&amp;headers=false"style="width:150%; height:600px;"></iframe>
+<h3 id="space-heights-to-stencils"><strong>Space heights to stencils </strong></h3>
+<p>In order to implement the height differences of spaces given from the Porgram of Requirements into the Apidae method, the initial given stencil (see left stencil in the picture below) has been expanded in the z axes. In the code, this has been done for 1, 2, 3, 4 and 5 voxels high. The highest stencil is 5 x 1.8m = 9 meters into the z axis and 1.8m on the x and y axis.</p>
+<p><img src="https://cdn.discordapp.com/attachments/784009094474366977/803249271100014612/unknown.png"></p>
+<p>The creation of the new stencils can be created with the following piece of code:
+In this piece of code new neighbours have been defined for the stencils that need to be higher than 1.8m. For example, s_2 has it's z axis neighbor now set at 2 high. Beware that later in the growth model, the occupation has to be adjusted accordingly.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># creating neighborhood definition for stencil that is 1.8m high</span>
+<span class="n">s_1</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">create_stencil</span><span class="p">(</span><span class="s2">&quot;von_neumann&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
-<h3 id="the-simulation">The simulation</h3>
-<iframe src="https://thumbs.gfycat.com/LittleAdmiredBufeo-size_restricted.gif" style="width:150%; height:400px;" frameborder="0"></iframe>
+<span class="c1"># setting the center to zero</span>
+<span class="n">s_1</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#####################################################################</span>
+<span class="c1"># skipping s_2, s_3, s_4 for this example because it&#39;s the same way</span>
+<span class="c1">#####################################################################</span>
+
+<span class="c1"># creating neighborhood definition for stencil that is 9m high</span>
+<span class="n">s_5</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">create_stencil</span><span class="p">(</span><span class="s2">&quot;von_neumann&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="c1"># setting the center to zero</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># setting the center to zero</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># listing the stencils in order to make them correspond later with the spaces and their height requirement</span>
+<span class="n">stencils</span> <span class="o">=</span> <span class="p">[</span><span class="n">s_1</span><span class="p">,</span> <span class="n">s_2</span><span class="p">,</span> <span class="n">s_3</span><span class="p">,</span> <span class="n">s_4</span><span class="p">,</span> <span class="n">s_5</span><span class="p">]</span>
+</code></pre></div>
+
+<h3 id="space-areas-to-voxel-amounts"><strong>Space areas to voxel amounts</strong></h3>
+<p>Based on the program of requirements, the required space sizes have been coverted to amount of necessary voxels to meet the area requirement and therefore fulfil it. This has been implemented in the script to maintain the desirded area per spaces, and has been used to limit the growth of the agents. 
+From the Program of Requirements the room areas can be obtained, and by giving every space a stencil id according to the desired free height (as explained before how the desired height can be implemented) the total amount of voxel necessary for the space to grow towards can be determined. This can be done with the following piece of code:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># max voxel count per space (here we do the stencil type + 1 </span>
+<span class="c1">#times the amount of area needed in order to obtain the total amount of voxels that need to be occupied by the script)</span>
+<span class="c1"># pick room area data</span>
+<span class="n">a_room_vox</span> <span class="o">=</span> <span class="n">agn_prefs</span><span class="p">[</span><span class="s2">&quot;room_area&quot;</span><span class="p">]</span>
+<span class="c1"># pick stencil id&#39;s and do +1 because we start with 0 instead of 1 (id 2 would have stencil 3 high otherwise)</span>
+<span class="n">a_room_stencil</span> <span class="o">=</span> <span class="n">agn_prefs</span><span class="p">[</span><span class="s2">&quot;stencil_id&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># obtain the max amount of voxels needing to be occupied by doing the room area times the height of the space (stencil)</span>
+<span class="n">a_room_voxels</span> <span class="o">=</span> <span class="n">a_room_stencil</span> <span class="o">*</span> <span class="n">a_room_vox</span>
+<span class="c1"># print in order to check below if you obtain correct values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_room_voxels</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Which gives the following table that can be used later in the growth model:</p>
+<p><center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803255219545964564/unknown.png"></center></p>
+<h2 id="definitive-program-table-result-input-for-generative-relations-simulation"><strong>Definitive program table result (input for generative relations simulation)</strong></h2>
+<p>The following table has been made based on the agent/space criterias, this has been used in the definitive script for generating the agent based design. </p>
+<p>4 kinds of values are included next to [white] the agent/space names and space id's:</p>
+<ol>
+<li>[blue] Desire to closeness to given entrance (0 to 1)</li>
+<li>[yellow] Desire for high values of the given analysis (0 to 1)</li>
+<li>[green] Necessary data from the program of requirements (imput specific values)</li>
+<li>[grey] Desire to be close to given agent/space (0 to 1)</li>
+</ol>
+<p>The given entrances for blue and given analysis for yellow are loaded in as csv files. For the making of those csv files, address their corresponding script.</p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3BSCNWlacKeNAtlluEjTCw5SMh3Tet-m3ixMxbSwR_aIhWDu0YJLZGvVQdgqWNg/pubhtml?gid=1634426511&amp;single=true&amp;widget=true&amp;headers=false"style="width:150%; height:600px;"></iframe>
+
+<hr />
+<h1 id="the-generative-relations-simulation"><strong>The generative relations simulation</strong></h1>
+<p>Since we have a bunch of data and values corresponding to that per agent, and we need to make decisions based on that (design wise), the script for the Multiple-criteria decision analysis for agents was used and further developed to our needs.  </p>
+<h2 id="how-it-works"><strong>How it works</strong></h2>
+<p>-INSERT HERE THE FLOWCHART-
+scuffed text incoming herschrijf:
+The growth model works as following:
+We run it for a given timeframe, and for each agent we evaluate the free voxels in the list and store this data
+After this, we start another for loop aka the main agent loop, where we retrieve the free neighbours access them and make sure it doesnt exceed given values such as the Z coordinate
+. After this is done, if there is a free neighbour found it checks the preferences and evaluates it with the fuzzy framework. And after this there’s 2 scenarios; the max area limit has not been reached yet so it picks the highest value neighbouring voxel. Else, it checks if there are better voxels to be occupied (if the given evaluation limit is higher than the agent satisfaction; it departs that bad voxel and occupies the new one. After this is done for all time frames, the new lattice is constructed with the occupation lattice. Which is the final result as I’ve shown before.</p>
+<h3 id="different-occupation-per-stencil"><strong>Different occupation per stencil</strong></h3>
+<h3 id="evaluation"><strong>Evaluation</strong></h3>
                 
               
               
