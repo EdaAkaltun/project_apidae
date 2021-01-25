@@ -364,7 +364,21 @@
     Skylight &amp; Skylight blocking
   </a>
   
-    <nav class="md-nav" aria-label="Skylight &amp; Skylight blocking">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skylight-access" class="md-nav__link">
+    skylight access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skylight-blocking" class="md-nav__link">
+    skylight blocking
+  </a>
+  
+    <nav class="md-nav" aria-label="skylight blocking">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -387,6 +401,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#threshold" class="md-nav__link">
+    Threshold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-envelope" class="md-nav__link">
+    New envelope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sun-and-skylight-improvements" class="md-nav__link">
     Sun and Skylight improvements
   </a>
@@ -396,6 +424,13 @@
         <li class="md-nav__item">
   <a href="#quietness" class="md-nav__link">
     Quietness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-highresquietness" class="md-nav__link">
+    Noise highres(quietness)
   </a>
   
 </li>
@@ -903,7 +938,21 @@
     Skylight &amp; Skylight blocking
   </a>
   
-    <nav class="md-nav" aria-label="Skylight &amp; Skylight blocking">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skylight-access" class="md-nav__link">
+    skylight access
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#skylight-blocking" class="md-nav__link">
+    skylight blocking
+  </a>
+  
+    <nav class="md-nav" aria-label="skylight blocking">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -926,6 +975,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#threshold" class="md-nav__link">
+    Threshold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-envelope" class="md-nav__link">
+    New envelope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sun-and-skylight-improvements" class="md-nav__link">
     Sun and Skylight improvements
   </a>
@@ -935,6 +998,13 @@
         <li class="md-nav__item">
   <a href="#quietness" class="md-nav__link">
     Quietness
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noise-highresquietness" class="md-nav__link">
+    Noise highres(quietness)
   </a>
   
 </li>
@@ -1109,32 +1179,47 @@ C <img src="https://cdn.discordapp.com/attachments/784009094474366977/8032492711
 <p>35<img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/7.0_time2500.png?raw=true" style="width:280px;"></p>
 <p>36<img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/midterm/trap.jpg?raw=true" style="width:280px;"></p>
 <p>37<img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/midterm/TRAP_2.jpg?raw=true" style="width:280px;"></p>
-<p>38 <iframe src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/growthgif.gif?raw=true" style="width:150%; height:400px;" frameborder="0"></iframe></p>
-<p>39 <iframe src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/ezgif-3-5e6cbec2a182.gif" style="width:150%; height:400px;" frameborder="0"></iframe></p>
-<p>40 <iframe src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/calcgifs.gif?raw=true" style="width:150%; height:400px;" frameborder="0"></iframe></p>
+<p>38 <iframe src="https://media3.giphy.com/media/9PX5rcQ64S6fxFSiho/giphy.gif" style="width:150%; height:400px;" frameborder="0"></iframe></p>
+<iframe src="https://media0.giphy.com/media/2XG01ZsHY4wzcGtt3L/giphy.gif" style="width:150%; height:400px;" frameborder="0"></iframe>
+<hr />
 <h1 id="process-of-massing">Process of massing</h1>
 <h2 id="solar-simulation-shadow-analysis">Solar Simulation &amp; Shadow Analysis</h2>
 <p>Based on the ladybug sunpath the solar and shadow envelope are calculated in one file, since they have a largely corresponding step. To do so a cast a ray from the centroid of the voxel towards all the points on the sunpath. If a ray is not intersected by the context, then this voxel receives sunlight from this point. If the ray is intersected by the context, then the voxel does not receive sunlight from this point. For all the voxel that have been hit, the rays that were shot towards the sun are reversed, to calculate the shadow. If this ray intersects the context, then the voxel casts a shadow. If the ray does not intersect the context, then the voxel does not cast a shadow. Both the sunlight and the shadow envelope are then interpolated to a highres value, being of our voxel size. </p>
+<p><center> <img src="https://cdn.discordapp.com/attachments/775754717346791494/803300922296893470/sun_and_shadow_hoofdstuk_3_sun_and_shadow.jpg"></center></p>
 <h3 id="lowres-size-decisions">Lowres size decisions</h3>
 <p>In the first run of the interpolated shadow file,  a lowres envelope of 2 voxels high was used. This resulted in the shadow casting calculation becoming much to generalized. In this situation it would see the entire bottom half of the building as not casting shadow on the neighbouring buildings, thus not showing them in the shadow casting and only showing the top half of the building in the visualisation. To solve this problem a lowres envelope of 3 voxels high was used. This resulted in a visualisation of the entire envelope. </p>
 <p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/midterm/lowreshighres.png?raw=true" style="width:280px;"></p>
+<hr />
 <h2 id="skylight-skylight-blocking">Skylight &amp; Skylight blocking</h2>
-<p>This script is very similar to the Solar simulation, but instead of loading a sunpath, a sphere is created to represent points in the sky. For each voxel a ray is cast from the centroid of the voxel towards all the points in the sky.  If a ray is not intersected by the context, then this voxel receives skylight from this point. If the ray is intersected by the context, then the voxel does not receive skylight from this point. For all the voxel that have been hit, the rays that were shot towards the sky are reversed, to calculate the skylight blocking. If this ray intersects the context, then the voxel casts blocks skylight from the context. If the ray does not intersect the context, then the voxel does not block skylight from the context. Both the skylight and the skylight blocking envelope are then interpolated to a highres value, being of our voxel size.</p>
+<p>This script is very similar to the Solar simulation, but instead of loading a sunpath, a sphere is created to represent points in the sky. For each voxel a ray is cast from the centroid of the voxel towards all the points in the sky.  If a ray is not intersected by the context, then this voxel receives skylight from this point. If the ray is intersected by the context, then the voxel does not receive skylight from this point. For all the voxel that have been hit, the rays that were shot towards the sky are reversed, to calculate the skylight blocking. If this ray intersects the context, then the voxel casts blocks skylight from the context. If the ray does not intersect the context, then the voxel does not block skylight from the context. Both the skylight and the skylight blocking envelope are then interpolated to a highres value, being of our voxel size.
+<img src="https://cdn.discordapp.com/attachments/775754717346791494/803300915749716088/skylight_and_skylight_blocking_hoofdstuk_3_skylight_and_skylight_blocking.jpg" style="width:280px;"></p>
+<h2 id="skylight-access">skylight access</h2>
+<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.0_skyaccess.png?raw=true" style="width:280px;"></p>
+<h2 id="skylight-blocking">skylight blocking</h2>
+<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.0_skyview.png?raw=true" style="width:280px;"></p>
 <h3 id="difference-between-shadow-and-solar">difference between shadow and solar</h3>
 <p>The result of the shadow envelope, solar envelope, skylight envelope and skylight blocking envelope  are processed in 2 ways. Fundamentally our building should be of least disturbance for the surrounding area, so it would not make sense to keep voxels that cast too much shadow or block too much skylight. Therefore, the voxels that cast too much shadow and block too much skylight from the context are removed. 
 For the sun and skylight values a similar argument could be made. For sake of the building one could argue that only the voxels with the best sun and skylight access should be used. However, this would result in removing the voxels on the ground floor. Since building can’t float in the sky(yet), and for the accessibility of public functions its best to have them on the ground floor, the data of sunlight and skylight is stored inside the voxels for the growth model (link to growth model). </p>
 <h3 id="removing-voxels">Removing voxels</h3>
 <p>To not cause too much shadow or block too much skylight from the context, the voxels that cast too much shadow or block too much skylight from the context, are removed from the envelope based on a threshold. This results in a new envelope without the “bad voxels” </p>
+<h2 id="threshold">Threshold</h2>
 <iframe src="https://thumbs.gfycat.com/ValidImaginativeChihuahua-size_restricted.gif" style="width:150%; height:430px;" frameborder="0"></iframe>
 
+<h2 id="new-envelope">New envelope</h2>
+<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.2_newfulllattice.png?raw=true" style="width:280px;"></p>
+<hr />
 <h2 id="sun-and-skylight-improvements">Sun and Skylight improvements</h2>
 <p>Although these scripts are functional, there are still some improvements that could be made. 
     -   Factoring the influence of voxels inside the envelope on the sun/skylight and shadow/ skylight blocking. 
         o   For the initial stage of storing data and removing voxels, solely using the influence of the context on the voxels to be blocking sun or skylight is sufficient. But for later stages when the building is generated (link to growth model), it would be an improvement to take the influence of light and shadow of voxels on each other. This would make that script even heavier, because it will have to calculate a light and shadow value each time it adds voxels. Besides that, a distinction should made with the outer voxels and inner voxels, to have some depth in the building. This depth should also be specified. To solve this, the growth model could be normally ran at first, and then after it has finished going through an evaluation loop to check the shadow and skylight blocking on the context.
     -   Removing bad voxels based on the shadow the context receives instead of the percentage of the time voxels cause shadow.<br />
         o   As of now a threshold is specified to remove voxels from the envelope based on the percentage of time these voxels cast shadow and block skylight from the context. However, it would be an improvement if the voxels are removed based on the effect they have on the context. If a voxel casts a shadow on the context 50% of the time, this could mean that it causes it on a different building each time, meaning that although the voxel looks “bad”, the net result on the context is negligible. This calculation should also be taken into the growth model (link to growth model). This does mean this script will become even more heavy as it now must calculate the shadow and skylight blocking each time it grows as well. To solve this, the growth model could be normally ran at first, and then after it has finished going through an evaluation loop to check the shadow and skylight blocking on the context. </p>
+<hr />
 <h2 id="quietness">Quietness</h2>
 <p>To calculate the quietness noise in the building in relation to its context a path with noise points on it is loaded inside a script. Each voxel then calculates the distance from the voxel centroid towards the noise point. These distances are added together and converted into a ratio. This script is actually more about business on street level than about quietness, since it imports noise points and not actual decibels from areas. This does not matter too much, since noise could be filtered from a building by adding more insulation and the relative quietness matters more than the actual numbers in decibels</p>
+<h2 id="noise-highresquietness">Noise highres(quietness)</h2>
+<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/3.2_quietness.png?raw=true" style="width:280px;"></p>
+<hr />
 <h2 id="entrances-and-distance-lattices-to-these-entrances">Entrances and distance lattices to these entrances</h2>
 <p>For this script, a design decision is needed in regards to the placement of the entrances. For this, the following site analysis is being done: </p>
 <p><img src="https://cdn.discordapp.com/attachments/784009094474366977/803248102412779550/entrances.jpg" style="width:280px;"></p>
@@ -1156,6 +1241,7 @@ distance lattice community centre</p>
 <h3 id="improvements">Improvements</h3>
 <p>To make an even more accurate and generative design, the initial locations of the entrances should not be chosen by hand but determined in a calculation of accessibility of the plot. This would be done by making an extensive model of all surrounding streets: their bustle, their usability for different types of traffic, and their potential. This extensive model could not only be used for generating entrances, but also for a noise calculation to value all voxels based on the traffic. 
 This more detailed way of locating an entrance should only be implemented during the growth model, so closeness of other entrances would be taken into account for generating the wished for street ambiance</p>
+<hr />
 <h2 id="greenery">greenery</h2>
 <p>For the plot, 30% should be dedicated to becoming a greenspace. The location of this greenspace could be generated in three different ways: </p>
 <ol>
@@ -1173,6 +1259,7 @@ Because of the complexity of this system and the lack of worth if not done well,
 <p>Because of the many entrances that have been generated at the more accessible side of the plot, the distance values of these voxels are relatively impactful for the average value lattice, leaving a low-valued space at the north of the plot. This directly results in a greenspace that is not as open-oriented, but that is more encapsulated behind the building and oriented towards local users. This fits in with our concept of the greenery, that would be a place for retreat and also a place to have a food garden for the neighbourhood and the communal kitchen. </p>
 <h3 id="improvements_1">Improvements</h3>
 <p>As has been stated in the decision for this type of greenery selection, a much more complex way of determining the location of the greenery would be possible, but a self-evaluation loop for sun- and daylight would be needed, as well as the implementation of current voxel value evaluation with implementation of the greenery voxel values. This would be very useful, but was not manageable within the given timeframe. </p>
+<hr />
 <h2 id="shafts-and-corridors">Shafts and Corridors</h2>
 <p>The shafts and corridors have been generated in a way that each floor has a network of corridors without any dead ends. 
 <img src="https://cdn.discordapp.com/attachments/784009094474366977/803313289912254514/depth_analysisTekengebied_1.png" style="width:600px;"></p>
@@ -1190,8 +1277,6 @@ For the growth of the communal corridors, the initial seeds of these functions a
 <p>The concept of these corridors is useful, but should be generated after the growth of the functions. Then it can find paths along the borders of each function, making sure no function gets limited in their growth. For some functions it might not be a problem if they were to be split up by these corridors and this could be determined in the agent preferences (housing functions, offices). This method would also make sure the most valuable voxels would not be occupied by the corridors, because the voxels that would now be occupied are the voxels that are placed later in the growth model and are therefore less ideal. Right now the corridor grows towards the most valuable voxel, occupying both this voxel and (at least) two of its direct neighbours.
 For the shafts, a stencil should be used to occupy all voxels that would be occupied when placing a shaft. </p>
 <hr />
-<p>NOTEPAD FOR ABM ETC</p>
-<hr />
 <h2 id="kpis-to-agent-criteria"><strong>KPI's to agent criteria</strong></h2>
 <p>explain what our criteria for the agents are and how they relate to the KPI's
 The following criteria have been implemented in the agent based simulation:</p>
@@ -1205,9 +1290,12 @@ The following criteria have been implemented in the agent based simulation:</p>
 <li>Greenery (Sustainability)</li>
 <li>Noise (Home quality) + (Collectivity) + (Sustainability)</li>
 </ul>
+<hr />
 <h2 id="configuring-spaces-to-workable-values"><strong>Configuring spaces to workable values</strong></h2>
 <p>In order to implement the design criteria as mentioned before, those had to be converted to workable values. The values have been written for each space versus the criteria varying from 0 to 1. 0 indicates no connection, 1 indicates a strong connection (Referencing back to the matrix from A1_Configuring). This has been applied for the following criteria: matrix based relations between spaces, sun access, entrance distance for public, housing, gym, parking and communal spaces, skyview, greenery and noise. </p>
 <p>For the space heights and space areas a different approach had to be made since those are hardcoded criteria coming from the Program of Requirements. Hence, those explained in the next paragraph. </p>
+<iframe src="https://thumbs.gfycat.com/LittleAdmiredBufeo-size_restricted.gif" style="width:150%; height:295px;" frameborder="0"></iframe>
+<p>[Midterm ABM growth simulation]</p>
 <h3 id="space-heights-to-stencils"><strong>Space heights to stencils </strong></h3>
 <p>In order to implement the height differences of spaces given from the Porgram of Requirements into the Apidae method, the initial given stencil for all agents (see left stencil in the picture below) has been expanded in the z axis. In the code, this has been done for 1, 2, 3, 4 and 5 voxels high. The highest stencil is 5 x 1.8m = 9 meters into the z axis and 1.8m on the x and y axis. The picture below shows, in the order of mention, the neighbors for a stencil that is 1.8m high, 3.6m high and 5.4m high.</p>
 <p><img src="https://cdn.discordapp.com/attachments/784009094474366977/803249271100014612/unknown.png"></p>
@@ -1256,6 +1344,7 @@ From the Program of Requirements the room areas can be obtained, and by giving e
 
 <p>Which gives the following table that can be used later in the growth model:</p>
 <p><center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803255219545964564/unknown.png"></center></p>
+<hr />
 <h2 id="definitive-program-table-result-input-for-generative-relations-simulation"><strong>Definitive program table result (input for generative relations simulation)</strong></h2>
 <p>The following table has been made based on the agent/space criterias, this has been used in the definitive script for generating the agent based design. </p>
 <p>4 kinds of values are included next to [white] the agent/space names and space id's:</p>
@@ -1268,6 +1357,11 @@ From the Program of Requirements the room areas can be obtained, and by giving e
 <p>The given entrances for blue and given analysis for yellow are loaded in as csv files. For the making of those csv files, address their corresponding script.</p>
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3BSCNWlacKeNAtlluEjTCw5SMh3Tet-m3ixMxbSwR_aIhWDu0YJLZGvVQdgqWNg/pubhtml?gid=1634426511&amp;single=true&amp;widget=true&amp;headers=false"style="width:150%; height:600px;"></iframe>
 
+<hr />
+<hr />
+<hr />
+<hr />
+<hr />
 <hr />
 <h1 id="the-generative-relations-simulation"><strong>The Generative Relations Simulation</strong></h1>
 <p>After obtaining all the input necessary for the growth model (distance caltulations, solar simulations etc.) it is imporant to be able to make decisions based on that. For this, the script for the Multiple-criteria decision analysis for agents was used and further developed to our needs.  </p>
@@ -1329,24 +1423,29 @@ After all the free neighbours are known, for every agent, if there is a free nei
 
 <h3 id="evaluation"><strong>Evaluation</strong></h3>
 <p>The current evaluation part of the code measures if an agent is satisfied with the given evaluation value through the program table. If the agent is not satisfied, it allows the agent to grow towards better voxels, where less valuable voxels are swapped for better ones. If the agent is satisfied, it stays the same and stops growing once it reaches it's max area value. </p>
-<p>The agent satisfaction has been tracked over the final result (2500 frames). With this data Panda tables have been made and visualized through graphs. This way, the agent satisfaction can be tracked without constantly having to look at the visualization and voxel growth manually. See graphs below for the results.</p>
-<p><center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322582107029554/AySsljdNmbF9AAAAAElFTkSuQmCC.png"></center></p>
-<p><center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322582107029554/AySsljdNmbF9AAAAAElFTkSuQmCC.png"></center></p>
-<p><center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322623199150130/B02eVgwU5jOiAAAAAElFTkSuQmCC.png"></center></p>
-<h3 id="improvement-points">Improvement points</h3>
-<p>Improvement points
-Distance calculation and evaluation between spaces
-Departure departs 1 voxel instead of entire stencil height
-Less timeframes (calculations behind)
-Squareness (conditional neighbour or different stencil) 
-Stencil assigning per floor 
-Shafts and corridors implementation</p>
-<p>We werent able to implement distance calculations between spaces, so spaces do not pull on each other, in fact they are next to each other only because they have the same preferences. </p>
-<p>Departure departs 1 voxel instead of entire stencil height right now</p>
-<p>It is better to find a way to do the frames code wise more efficiently since the current one has to be run the amount of voxels the biggest agent is. Which is kind of inefficient since maybe all others are already done halfway.</p>
-<p>We weren’t able to implement squareness yet due to the time limit. This could have 2 ways: we could set conditions to the neighbours in order to do so or we could make bigger stencils in the x and y axes as cubes but that actually complicates things regarding neighbouring and occupying.</p>
-<p>Also we havent yet been able to implement specific stencils only for specific z coordinates, So the public spaces are now 5 z coordinate high stencils instead of one fo 3 that only grows 2 high stencils above itself. </p>
-<p>Also it is important to combine shafts and corridors, but when we combined those 2 it made the ABM growth get stuck between corridors and not grow further (this happened because we dont want public spaces to grow above  a certain height) -&gt; i personally think pathfinding between spaces after growing them could be the solution to this but this would mean we wouldnt have shortest paths and its a question whether we want to design spaces before giving them their pathing, or do we want an efficient pathing and then give them spaces.</p>
+<p>The agent satisfaction has been tracked over the final result (2500 frames). With this data Panda tables have been made and visualized through graphs. This way, the agent satisfaction can be tracked without constantly having to look at the visualization and voxel growth manually. See graphs below for the results. The agent names correspond to their agent id in the program.</p>
+<p>Evaluation over time for public spaces and entrances:
+<center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322582107029554/AySsljdNmbF9AAAAAElFTkSuQmCC.png"></center></p>
+<p>Evaluation over time for Assisted living (11), Student housing (17) and Start-up office (19)
+<center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322582107029554/AySsljdNmbF9AAAAAElFTkSuQmCC.png"></center></p>
+<p>Evaluation over time for starter housing (16):
+<center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322623199150130/B02eVgwU5jOiAAAAAElFTkSuQmCC.png"></center></p>
+<h3 id="final-growth"><strong>Final growth</strong></h3>
+<iframe src="https://media3.giphy.com/media/WDhRzS8AIleGliAs9s/giphy.gif" style="width:150%; height:300px;" frameborder="0"></iframe>
+
+<h3 id="improvement-points"><strong>Improvement points</strong></h3>
+<ul>
+<li>Distance calculation and evaluation between spaces: 
+We werent able to implement distance calculations between spaces, so spaces do not pull on each other, in fact they are next to each other only because they have the same preferences. </li>
+<li>Less timeframes (calculations behind)
+It is better to find a way to do the frames code wise more efficiently since the current one has to be run the amount of voxels the biggest agent is. Which is kind of inefficient since maybe all others are already done halfway. </li>
+<li>Squareness (conditional neighbour or different stencil) 
+We weren’t able to implement squareness yet due to the time limit. This could have 2 ways: we could set conditions to the neighbours in order to do so or we could make bigger stencils in the x and y axes as cubes but that actually complicates things regarding neighbouring and occupying.</li>
+<li>Stencil assigning per floor 
+Also we havent yet been able to implement specific stencils only for specific z coordinates, So the public spaces are now 5 z coordinate high stencils instead of one fo 3 that only grows 2 high stencils above itself.</li>
+<li>Shafts and corridors implementation
+It is important to combine shafts and corridors, but when we combined those 2, it made the agents get stuck between corridors and not grow further (this happened because we dont want public spaces to grow above  a certain height). </li>
+</ul>
                 
               
               
