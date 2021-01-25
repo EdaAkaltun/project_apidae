@@ -364,21 +364,7 @@
     Skylight &amp; Skylight blocking
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#skylight-access" class="md-nav__link">
-    skylight access
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#skylight-blocking" class="md-nav__link">
-    skylight blocking
-  </a>
-  
-    <nav class="md-nav" aria-label="skylight blocking">
+    <nav class="md-nav" aria-label="Skylight &amp; Skylight blocking">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -401,20 +387,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#threshold" class="md-nav__link">
-    Threshold
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#new-envelope" class="md-nav__link">
-    New envelope
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#sun-and-skylight-improvements" class="md-nav__link">
     Sun and Skylight improvements
   </a>
@@ -424,13 +396,6 @@
         <li class="md-nav__item">
   <a href="#quietness" class="md-nav__link">
     Quietness
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#noise-highresquietness" class="md-nav__link">
-    Noise highres(quietness)
   </a>
   
 </li>
@@ -950,21 +915,7 @@
     Skylight &amp; Skylight blocking
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#skylight-access" class="md-nav__link">
-    skylight access
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#skylight-blocking" class="md-nav__link">
-    skylight blocking
-  </a>
-  
-    <nav class="md-nav" aria-label="skylight blocking">
+    <nav class="md-nav" aria-label="Skylight &amp; Skylight blocking">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -987,20 +938,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#threshold" class="md-nav__link">
-    Threshold
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#new-envelope" class="md-nav__link">
-    New envelope
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#sun-and-skylight-improvements" class="md-nav__link">
     Sun and Skylight improvements
   </a>
@@ -1010,13 +947,6 @@
         <li class="md-nav__item">
   <a href="#quietness" class="md-nav__link">
     Quietness
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#noise-highresquietness" class="md-nav__link">
-    Noise highres(quietness)
   </a>
   
 </li>
@@ -1204,25 +1134,25 @@ C <img src="https://cdn.discordapp.com/attachments/784009094474366977/8032492711
 <em>Shadow calculation</em></p>
 <h3 id="lowres-size-decisions">Lowres size decisions</h3>
 <p>In the first run of the interpolated shadow file,  a lowres envelope of 2 voxels high was used. This resulted in the shadow casting calculation becoming much to generalized. In this situation it would see the entire bottom half of the building as not casting shadow on the neighbouring buildings, thus not showing them in the shadow casting and only showing the top half of the building in the visualisation. To solve this problem a lowres envelope of 3 voxels high was used. This resulted in a visualisation of the entire envelope. </p>
-<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/midterm/lowreshighres.png?raw=true" style="width:280px;"></p>
+<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/midterm/lowreshighres.png?raw=true"></p>
 <hr />
 <h2 id="skylight-skylight-blocking">Skylight &amp; Skylight blocking</h2>
 <p>This script is very similar to the Solar simulation, but instead of loading a sunpath, a sphere is created to represent points in the sky. For each voxel a ray is cast from the centroid of the voxel towards all the points in the sky.  If a ray is not intersected by the context, then this voxel receives skylight from this point. If the ray is intersected by the context, then the voxel does not receive skylight from this point. For all the voxel that have been hit, the rays that were shot towards the sky are reversed, to calculate the skylight blocking. If this ray intersects the context, then the voxel casts blocks skylight from the context. If the ray does not intersect the context, then the voxel does not block skylight from the context. Both the skylight and the skylight blocking envelope are then interpolated to a highres value, being of our voxel size.</p>
-<p><img src="https://cdn.discordapp.com/attachments/775754717346791494/803300915749716088/skylight_and_skylight_blocking_hoofdstuk_3_skylight_and_skylight_blocking.jpg" style="width:280px;"></p>
-<h2 id="skylight-access">skylight access</h2>
-<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.0_skyaccess.png?raw=true" style="width:280px;"></p>
-<h2 id="skylight-blocking">skylight blocking</h2>
-<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.0_skyview.png?raw=true" style="width:280px;"></p>
+<p><img src="https://cdn.discordapp.com/attachments/775754717346791494/803300915749716088/skylight_and_skylight_blocking_hoofdstuk_3_skylight_and_skylight_blocking.jpg"></p>
+<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.0_skyaccess.png?raw=true"></p>
+<p><em>skylight access</em></p>
+<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.0_skyview.png?raw=true"></p>
+<p><em>skylight blocking</em></p>
 <h3 id="difference-between-shadow-and-solar">difference between shadow and solar</h3>
 <p>The result of the shadow envelope, solar envelope, skylight envelope and skylight blocking envelope  are processed in 2 ways. Fundamentally our building should be of least disturbance for the surrounding area, so it would not make sense to keep voxels that cast too much shadow or block too much skylight. Therefore, the voxels that cast too much shadow and block too much skylight from the context are removed. 
 For the sun and skylight values a similar argument could be made. For sake of the building one could argue that only the voxels with the best sun and skylight access should be used. However, this would result in removing the voxels on the ground floor. Since building can’t float in the sky(yet), and for the accessibility of public functions its best to have them on the ground floor, the data of sunlight and skylight is stored inside the voxels for the growth model (link to growth model). </p>
 <h3 id="removing-voxels">Removing voxels</h3>
 <p>To not cause too much shadow or block too much skylight from the context, the voxels that cast too much shadow or block too much skylight from the context, are removed from the envelope based on a threshold. This results in a new envelope without the “bad voxels” </p>
-<h2 id="threshold">Threshold</h2>
 <iframe src="https://thumbs.gfycat.com/ValidImaginativeChihuahua-size_restricted.gif" style="width:150%; height:430px;" frameborder="0"></iframe>
 
-<h2 id="new-envelope">New envelope</h2>
+<p><em>Threshold</em> </p>
 <p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.2_newfulllattice.png?raw=true" style="width:280px;"></p>
+<p><em>New envelope</em></p>
 <hr />
 <h2 id="sun-and-skylight-improvements">Sun and Skylight improvements</h2>
 <p>Although these scripts are functional, there are still some improvements that could be made. 
@@ -1233,8 +1163,8 @@ For the sun and skylight values a similar argument could be made. For sake of th
 <hr />
 <h2 id="quietness">Quietness</h2>
 <p>To calculate the quietness noise in the building in relation to its context a path with noise points on it is loaded inside a script. Each voxel then calculates the distance from the voxel centroid towards the noise point. These distances are added together and converted into a ratio. This script is actually more about business on street level than about quietness, since it imports noise points and not actual decibels from areas. This does not matter too much, since noise could be filtered from a building by adding more insulation and the relative quietness matters more than the actual numbers in decibels</p>
-<h2 id="noise-highresquietness">Noise highres(quietness)</h2>
 <p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/3.2_quietness.png?raw=true" style="width:280px;"></p>
+<p><em>Noise highres(quietness)</em></p>
 <hr />
 <h2 id="entrances-and-distance-lattices-to-these-entrances">Entrances and distance lattices to these entrances</h2>
 <p>For this script, a design decision is needed in regards to the placement of the entrances. For this, the following site analysis has been made: </p>
@@ -1312,7 +1242,8 @@ The following criteria have been implemented in the agent based simulation:</p>
 <p>In order to implement the design criteria as mentioned before, those had to be converted to workable values. The values have been written for each space versus the criteria varying from 0 to 1. 0 indicates no connection, 1 indicates a strong connection (Referencing back to the matrix from A1_Configuring). This has been applied for the following criteria: matrix based relations between spaces, sun access, entrance distance for public, housing, gym, parking and communal spaces, skyview, greenery and noise. </p>
 <p>For the space heights and space areas a different approach had to be made since those are hardcoded criteria coming from the Program of Requirements. Hence, those explained in the next paragraph. </p>
 <iframe src="https://thumbs.gfycat.com/LittleAdmiredBufeo-size_restricted.gif" style="width:150%; height:295px;" frameborder="0"></iframe>
-<p>[Midterm ABM growth simulation]</p>
+
+<p><em>Midterm ABM growth simulation</em></p>
 <h3 id="space-heights-to-stencils"><strong>Space heights to stencils </strong></h3>
 <p>In order to implement the height differences of spaces given from the Porgram of Requirements into the Apidae method, the initial given stencil for all agents (see left stencil in the picture below) has been expanded in the z axis. In the code, this has been done for 1, 2, 3, 4 and 5 voxels high. The highest stencil is 5 x 1.8m = 9 meters into the z axis and 1.8m on the x and y axis. The picture below shows, in the order of mention, the neighbors for a stencil that is 1.8m high, 3.6m high and 5.4m high.</p>
 <p><img src="https://cdn.discordapp.com/attachments/784009094474366977/803249271100014612/unknown.png"></p>
@@ -1438,6 +1369,16 @@ After all the free neighbours are known, for every agent, if there is a free nei
                 <span class="n">occ_lattice</span><span class="p">[</span><span class="n">selected_neigh_3d_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_id</span>
 </code></pre></div>
 
+<h2 id="housing-plan-modularity-with-stencils">Housing plan modularity with stencils</h2>
+<p>A highly modular building needs to be adaptable and reusable for different functions over time. The standardised voxels are very suitable for generating this, but more importantly, they give freedom to generate many different housing plans. For the agent based model, an extra layer of information could be added by growing stencil-based for all housing, co-working spaces and start-up offices. 
+Different housing tiles are generated, that together carry all needed functions. For each housing type, a tile library should be made to generate rooms and spaces that fulfil all requirements. These tiles each have markings along the sides, where closed walls, windows, openings to public functions or openings to indoor functions are determined. This way, each house will form based on the markings and their personal library. By generating the housing units like this, all houses will automatically be correctly connected to a corridor, the depth of the building will be limited to the depth of a house and each house will have sufficient daylight and have all their functions available. An extra layer to this would then be the implementation of placement of open and closed facades for each house, coherent with the sun orientation of the building, but also the view. For this the demand of sky visibility and sunlight availability could be calculated for each potential window, which would then also limit the occurrence of two houses growing opposite of each other with minimal free space between them. </p>
+<p><img src="https://cdn.discordapp.com/attachments/784009094474366977/803382410254614538/met_stencils_Pagina_1.jpg">
+<img src="https://cdn.discordapp.com/attachments/784009094474366977/803382435085287454/met_stencils_Pagina_2.jpg"></p>
+<p>The concept of these stencil-based growth is visualised in the picture above. The timeframe of this course limited the elaboration on this complex growth model, but thoughts have been put into it. </p>
+<p><img src="https://cdn.discordapp.com/attachments/784009094474366977/803384607834898432/plattegrondenTekengebied_4.png">
+<img src="https://cdn.discordapp.com/attachments/784009094474366977/803384610809184296/plattegrondenTekengebied_7.png">
+<img src="https://cdn.discordapp.com/attachments/784009094474366977/803384611396780062/plattegrondenTekengebied_10.png"></p>
+<p>Instead, simpler housing plans are generated. Still based on the voxel-sized plan, but with a standardisation for each housing unit, where there are just a few fixed stencils for each building. This is also not implemented in the growth model due to time limitations. </p>
 <h3 id="evaluation"><strong>Evaluation</strong></h3>
 <p>The current evaluation part of the code measures if an agent is satisfied with the given evaluation value through the program table. If the agent is not satisfied, it allows the agent to grow towards better voxels, where less valuable voxels are swapped for better ones. If the agent is satisfied, it stays the same and stops growing once it reaches it's max area value. </p>
 <p>The agent satisfaction has been tracked over the final result (2500 frames). With this data Panda tables have been made and visualized through graphs. This way, the agent satisfaction can be tracked without constantly having to look at the visualization and voxel growth manually. See graphs below for the results. The agent names correspond to their agent id in the program.</p>
