@@ -279,7 +279,7 @@
 
   <li class="md-nav__item">
     <a href="../../A2_Configuring/a2_configuring_Spacecriteria/" class="md-nav__link">
-      Space criterias
+      Space criteria
     </a>
   </li>
 
@@ -1138,8 +1138,7 @@ From the Program of Requirements the room areas can be obtained, and by giving e
 
 <h1 id="the-generative-relations-simulation"><strong>The Generative Relations Simulation</strong></h1>
 <p>After obtaining all the input necessary for the growth model (distance caltulations, solar simulations etc.) it is imporant to be able to make decisions based on that. For this, the script for the Multiple-criteria decision analysis for agents was used and further developed to our needs.  </p>
-<p>With the method explained before, the stencils and area calculations were made. The final ABM (Agent Based Model) growth script can be found here 
-(INSERT LINKKKKKKKKKKKKKKKKKKK)!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<p>With the method explained before, the stencils and area calculations were made. The final ABM (Agent Based Model) growth script can be found <a href="https://edaakaltun.github.io/spatial_computing_project_template/notebooks/7_ABM_growth/">here</a>. </p>
 <h2 id="how-it-works"><strong>How it works</strong></h2>
 <p><center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803280396954370088/unknown.png"></center>
 The ABM (Agent Based Model) growth script runs over a given timeframe. This timeframe is set for it to grow a voxel/stencil per frame. Due to the implementation of stencils with different z axis, the script becomes more efficient (since it covers more voxels per frame). </p>
@@ -1198,8 +1197,8 @@ After all the free neighbours are known, for every agent, if there is a free nei
 <p>A highly modular building needs to be adaptable and reusable for different functions over time. The standardised voxels are very suitable for generating this, but more importantly, they give freedom to generate many different housing plans. For the agent based model, an extra layer of information could be added by growing stencil-based for all housing, co-working spaces and start-up offices. 
 Different housing tiles are generated, that together carry all needed functions. For each housing type, a tile library should be made to generate rooms and spaces that fulfil all requirements. These tiles each have markings along the sides, where closed walls, windows, openings to public functions or openings to indoor functions are determined. This way, each house will form based on the markings and their personal library. By generating the housing units like this, all houses will automatically be correctly connected to a corridor, the depth of the building will be limited to the depth of a house and each house will have sufficient daylight and have all their functions available. An extra layer to this would then be the implementation of placement of open and closed facades for each house, coherent with the sun orientation of the building, but also the view. For this the demand of sky visibility and sunlight availability could be calculated for each potential window, which would then also limit the occurrence of two houses growing opposite of each other with minimal free space between them. </p>
 <p><center><img src="https://cdn.discordapp.com/attachments/784009094474366977/803382410254614538/met_stencils_Pagina_1.jpg"></p>
-<p><em>function stencil concepts: student housing and corridor</em>
-<img src="https://cdn.discordapp.com/attachments/784009094474366977/803382435085287454/met_stencils_Pagina_2.jpg"></p>
+<p><em>function stencil concepts: student housing and corridor</em></p>
+<p><img src="https://cdn.discordapp.com/attachments/784009094474366977/803382435085287454/met_stencils_Pagina_2.jpg"></p>
 <p><em>conceptual configuration of the growth of housing units</em>
 </center></p>
 <p>The concept of these stencil-based growth is visualised in the picture above. The timeframe of this course limited the elaboration on this complex growth model, but thoughts have been put into it. </p>

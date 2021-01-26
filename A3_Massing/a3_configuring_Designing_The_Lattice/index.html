@@ -279,7 +279,7 @@
 
   <li class="md-nav__item">
     <a href="../../A2_Configuring/a2_configuring_Spacecriteria/" class="md-nav__link">
-      Space criterias
+      Space criteria
     </a>
   </li>
 
@@ -1044,15 +1044,15 @@
 <h3 id="sun-and-skylight">Sun and Skylight</h3>
 <p>Based on the ladybug sunpath the shadow envelope is calculated. To do so a ray is cast from the centroids of all the voxel that have received sun, towards the context. If the ray does not intersect the context, then the voxel does not cast a shadow. The shadow envelope is then interpolated to a highres value. </p>
 <p>For Skylight blocking all these steps are repeated, but instead of loading a sunpath, a sphere is created to represent the sky. Instead of shooting rays towards the sunpoints, the rays are being shot to the skypoints. </p>
-<p><center><img src="https://media.discordapp.net/attachments/785803868356476958/803590073899155456/shadow_and_skylight_blocking.jpg?width=948&height=670" style="width:280px;"></p>
+<p><center><img src="https://media.discordapp.net/attachments/785803868356476958/803590073899155456/shadow_and_skylight_blocking.jpg?width=948&height=670"></p>
 <p><em>method of skylight and sun blocking</em> </center></p>
 <p>Fundamentally our building should be of least disturbance for the surrounding area, so it would not make sense to keep voxels that cast too much shadow or block too much skylight. Therefore, the voxels that cast too much shadow and block too much skylight from the context are removed.</p>
-<p><center><img src="https://cdn.discordapp.com/attachments/775754717346791494/801507211003822190/shadow.png" style="width:280px;"></p>
+<p><center><img src="https://cdn.discordapp.com/attachments/775754717346791494/801507211003822190/shadow.png"></p>
 <p><em>Shadow calculation</em></p>
-<iframe src="https://thumbs.gfycat.com/ValidImaginativeChihuahua-size_restricted.gif" style="width:150%; height:430px;" frameborder="0"></iframe>
+<iframe src="https://thumbs.gfycat.com/ValidImaginativeChihuahua-size_restricted.gif" style="width:150%; height:295px;" frameborder="0"></iframe>
 
 <p><em>Threshold</em> </p>
-<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.2_newfulllattice.png?raw=true" style="width:280px;"></p>
+<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/2.2_newfulllattice.png?raw=true"></p>
 <p><em>New envelope</em>
 </center></p>
 <h2 id="greenery">greenery</h2>

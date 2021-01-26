@@ -279,7 +279,7 @@
 
   <li class="md-nav__item">
     <a href="../../A2_Configuring/a2_configuring_Spacecriteria/" class="md-nav__link">
-      Space criterias
+      Space criteria
     </a>
   </li>
 
@@ -1094,7 +1094,7 @@ To generate these values, different computations are being made, and are being e
         o   As of now a threshold is specified to remove voxels from the envelope based on the percentage of time these voxels cast shadow and block skylight from the context. However, it would be an improvement if the voxels are removed based on the effect they have on the context. If a voxel casts a shadow on the context 50% of the time, this could mean that it causes it on a different building each time, meaning that although the voxel looks “bad”, the net result on the context is negligible. This calculation should also be taken into the growth model (link to growth model). This does mean this script will become even more heavy as it now must calculate the shadow and skylight blocking each time it grows as well. To solve this, the growth model could be normally ran at first, and then after it has finished going through an evaluation loop to check the shadow and skylight blocking on the context. </p>
 <h2 id="quietness">Quietness</h2>
 <p>To calculate the quietness noise in the building in relation to its context a path with noise points on it is loaded inside a script. Each voxel then calculates the distance from the voxel centroid towards the noise point. These distances are added together and converted into a ratio. This script is actually more about business on street level than about quietness, since it imports noise points and not actual decibels from areas. This does not matter too much, since noise could be filtered from a building by adding more insulation and the relative quietness matters more than the actual numbers in decibels</p>
-<p><center><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/3.2_quietness.png?raw=true" style="width:280px;"></p>
+<p><center><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/3.2_quietness.png?raw=true"></p>
 <p><em>Noise highres(quietness)</em></center></p>
 <hr />
 <h2 id="entrances-and-distance-lattices-to-these-entrances">Entrances and distance lattices to these entrances</h2>
