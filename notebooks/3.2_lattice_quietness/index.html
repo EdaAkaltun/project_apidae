@@ -1,0 +1,1758 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../img/logo/apidae.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
+    
+    
+      
+        <title>Quietness - Project Apidae</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.21aed14c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffc105">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tajawal:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Tajawal",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/ansi-colours.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#noise-interpolation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Project Apidae" class="md-header-nav__button md-logo" aria-label="Project Apidae">
+      
+  <img src="../../img/logo/apidae_solo_black.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Project Apidae
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Quietness
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Project Apidae" class="md-nav__button md-logo" aria-label="Project Apidae">
+      
+  <img src="../../img/logo/apidae_solo_black.png" alt="logo">
+
+    </a>
+    Project Apidae
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      A1_Planning
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A1_Planning" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        A1_Planning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A1_Planning/a1_planning_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A1_Planning/a1_planning_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      A2_Configuring
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A2_Configuring" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        A2_Configuring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A2_Configuring/a2_configuring_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A2_Configuring/a2_configuring_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      A3_Massing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A3_Massing" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        A3_Massing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A3_Massing/a3_massing_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A3_Massing/a3_massing_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    <label class="md-nav__link" for="nav-6">
+      A4_Forming
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A4_Forming" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        A4_Forming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A4_Forming/a4_forming_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A4_Forming/a4_forming_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Final_Deliverables/finalstuff/" class="md-nav__link">
+      Final_Deliverables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    <label class="md-nav__link" for="nav-8">
+      Index
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Index" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Index
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" checked>
+    <label class="md-nav__link" for="nav-8-1">
+      Scripts
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Scripts" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1_voxelization/" class="md-nav__link">
+      Voxelization highres and lowres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.1_lattice_sun_and_shadow/" class="md-nav__link">
+      Sun and shadow analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.2_full_lattice_sun_sky_blocking/" class="md-nav__link">
+      Sun block analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.1_lattices_skylight/" class="md-nav__link">
+      Skyview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Quietness
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Quietness
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-initialization" class="md-nav__link">
+    0. Initialization
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-load-required-libraries" class="md-nav__link">
+    0.1. Load required libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-load-the-envelope-lattice-as-the-avialbility-lattice" class="md-nav__link">
+    0.2. Load the envelope lattice as the avialbility lattice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-load-noise-sources" class="md-nav__link">
+    0.3. Load noise sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-visualize-noise-source-points" class="md-nav__link">
+    0.4. Visualize noise source points
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-import-lattice-envelope" class="md-nav__link">
+    1. Import Lattice (envelope)
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Import Lattice (envelope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-load-the-envelope-lattice" class="md-nav__link">
+    1.1. Load the Envelope Lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creation-of-noise-field" class="md-nav__link">
+    2. Creation of Noise Field
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Creation of Noise Field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-computing-noise-lattices" class="md-nav__link">
+    2.1. Computing noise lattices
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Computing noise lattices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22-store-noise-access-information-in-a-lattice" class="md-nav__link">
+    2.2. Store noise access information in a Lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-interpolation" class="md-nav__link">
+    3. Interpolation
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Interpolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-visualize-the-interpolated-noise" class="md-nav__link">
+    3.1. Visualize the interpolated noise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-save-quietness-access-lattice-into-a-csv" class="md-nav__link">
+    4. Save Quietness Access Lattice into a CSV
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Save Quietness Access Lattice into a CSV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.3_lattice_public_entrances/" class="md-nav__link">
+      Distance calculation, Public entrances
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.4_lattice_gym/" class="md-nav__link">
+      Distance calculation, Gym entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.5_lattice_parking_entrance/" class="md-nav__link">
+      Distance calculation, Parking entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.6_lattice_housing/" class="md-nav__link">
+      Distance calculation, Housing entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.7_lattice_comcen_entrance/" class="md-nav__link">
+      Distance calculation, Comunity Center entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4_full_lattice_minus_greenery/" class="md-nav__link">
+      Full lattice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.1_corridors_groundfloor/" class="md-nav__link">
+      Corridors ground floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.2_corridors_upper_floors/" class="md-nav__link">
+      Corridors upper floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.3_shafts/" class="md-nav__link">
+      Shafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6.1_lattice_distance_community/" class="md-nav__link">
+      Distance calculation, ground floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6.2_lattice_distance_upper_floors/" class="md-nav__link">
+      Distance calculation, upper floors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../7_ABM_growth/" class="md-nav__link">
+      Agent Based Model growth simulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../8_polygonization/" class="md-nav__link">
+      Polygonization
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/figures/" class="md-nav__link">
+      Figures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/presentations/" class="md-nav__link">
+      Presentations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/bibliography/" class="md-nav__link">
+      Bibliography
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+    <label class="md-nav__link" for="nav-9">
+      Documenting (TBR)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Documenting (TBR)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/instructions/" class="md-nav__link">
+      Instructions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/folder_structure/" class="md-nav__link">
+      Folder Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../quotes/" class="md-nav__link">
+      Quotes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../reflection/" class="md-nav__link">
+      Reflection
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-initialization" class="md-nav__link">
+    0. Initialization
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-load-required-libraries" class="md-nav__link">
+    0.1. Load required libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-load-the-envelope-lattice-as-the-avialbility-lattice" class="md-nav__link">
+    0.2. Load the envelope lattice as the avialbility lattice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#03-load-noise-sources" class="md-nav__link">
+    0.3. Load noise sources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#04-visualize-noise-source-points" class="md-nav__link">
+    0.4. Visualize noise source points
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-import-lattice-envelope" class="md-nav__link">
+    1. Import Lattice (envelope)
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Import Lattice (envelope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-load-the-envelope-lattice" class="md-nav__link">
+    1.1. Load the Envelope Lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creation-of-noise-field" class="md-nav__link">
+    2. Creation of Noise Field
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Creation of Noise Field">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-computing-noise-lattices" class="md-nav__link">
+    2.1. Computing noise lattices
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1. Computing noise lattices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#22-store-noise-access-information-in-a-lattice" class="md-nav__link">
+    2.2. Store noise access information in a Lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-interpolation" class="md-nav__link">
+    3. Interpolation
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Interpolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-visualize-the-interpolated-noise" class="md-nav__link">
+    3.1. Visualize the interpolated noise
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-save-quietness-access-lattice-into-a-csv" class="md-nav__link">
+    4. Save Quietness Access Lattice into a CSV
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Save Quietness Access Lattice into a CSV">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    Credits
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+(function() {
+  function addWidgetsRenderer() {
+    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
+    var scriptElement = document.createElement('script');
+    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    var widgetState;
+
+    // Fallback for older version:
+    try {
+      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
+
+      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
+        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
+      }
+    } catch(e) {}
+
+    scriptElement.src = widgetRendererSrc;
+    document.body.appendChild(scriptElement);
+  }
+
+  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
+}());
+</script>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="noise-interpolation">Noise Interpolation</h1>
+<p>This script calculates the noise values throughout a building from a noise source. 
+It takes as inputs a low_res and high_res version of the building, as well as a noise path, which consists of points. 
+As an output it generates a quietness lattice. </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="0-initialization">0. Initialization</h2>
+<h3 id="01-load-required-libraries">0.1. Load required libraries</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">topogenesis</span> <span class="k">as</span> <span class="nn">tg</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="kn">import</span> <span class="nn">trimesh</span> <span class="k">as</span> <span class="nn">tm</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">from</span> <span class="nn">ladybug.sunpath</span> <span class="kn">import</span> <span class="n">Sunpath</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">RegularGridInterpolator</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="02-load-the-envelope-lattice-as-the-avialbility-lattice">0.2. Load the envelope lattice as the avialbility lattice</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># loading the lattice from csv</span>
+<span class="n">lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/voxelized_envelope_lowres.csv&#39;</span><span class="p">)</span>
+<span class="n">avail_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">lattice_path</span><span class="p">)</span>
+<span class="n">init_avail_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">avail_lattice</span><span class="p">),</span> <span class="n">avail_lattice</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="03-load-noise-sources">0.3. Load noise sources</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># loading noise points from CSV</span>
+<span class="n">noise_source_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/noise_points_2.csv&#39;</span><span class="p">)</span>
+<span class="n">noise_sources</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">noise_source_path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">noise_sources</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>array([[-122.45744603,   97.68269715,    0.        ],
+       [-121.54787169,   67.22756572,    0.        ],
+       [-120.63829735,   36.77243428,    0.        ],
+       [-119.72872301,    6.31730285,    0.        ],
+       [-118.81914868,  -24.13782858,    0.        ],
+       [-117.90957434,  -54.59296001,    0.        ],
+       [-117.        ,  -85.04809144,    0.        ],
+       [-116.09042566, -115.50322287,    0.        ],
+       [-115.18085132, -145.9583543 ,    0.        ],
+       [-114.27127699, -176.41348574,    0.        ],
+       [-113.36170265, -206.86861717,    0.        ]])</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="04-visualize-noise-source-points">0.4. Visualize noise source points</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># adding the avilability lattice</span>
+<span class="n">init_avail_lattice</span><span class="o">.</span><span class="n">fast_vis</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="c1"># adding axes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_axes</span><span class="p">()</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">noise_sources</span><span class="p">,</span> <span class="n">point_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="fe18c93a-2ab4-4e3e-a431-1c4319b1e588"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#fe18c93a-2ab4-4e3e-a431-1c4319b1e588');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "c370da709725404eafbd7a1286532ce0", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(430.5979628079493, 379.73372581089836, 454.3266858210055),
+ (-3.7287230130562534, -54.59296001010717, 20.0),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1-import-lattice-envelope">1. Import Lattice (envelope)</h2>
+<h3 id="11-load-the-envelope-lattice">1.1. Load the Envelope Lattice</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># loading the lowres lattice from csv</span>
+<span class="n">lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/voxelized_envelope_lowres.csv&#39;</span><span class="p">)</span>
+<span class="n">envelope_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">lattice_path</span><span class="p">)</span>
+
+
+<span class="c1"># loading the highres lattice from csv</span>
+<span class="n">lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/voxelized_envelope_highres.csv&#39;</span><span class="p">)</span>
+<span class="n">avail_lattice_highres</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">lattice_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2-creation-of-noise-field">2. Creation of Noise Field</h2>
+<h3 id="21-computing-noise-lattices">2.1. Computing noise lattices</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># create full lattice</span>
+<span class="n">full_lattice</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1"># extract the coordiantes of the centroid of all voxel</span>
+<span class="n">vox_centroids</span> <span class="o">=</span> <span class="n">full_lattice</span><span class="o">.</span><span class="n">centroids</span>
+
+<span class="c1"># extract voxel indices of all voxels</span>
+<span class="n">vox_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">full_lattice</span><span class="o">==</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="c1"># setting the noise base pressure level </span>
+<span class="n">noise_base</span> <span class="o">=</span> <span class="mf">75.0</span>
+
+<span class="c1"># initializing the sum lattice of noise</span>
+<span class="n">sum_noise_lats</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mf">0.0</span>
+
+<span class="c1"># for each source of noise</span>
+<span class="k">for</span> <span class="n">noise_src</span> <span class="ow">in</span> <span class="n">noise_sources</span><span class="p">:</span>
+    <span class="c1"># initialize the occupation lattice</span>
+    <span class="n">dist_latice</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mf">0.0</span>
+
+    <span class="k">for</span> <span class="n">cen</span><span class="p">,</span> <span class="n">ind</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">vox_centroids</span><span class="p">,</span> <span class="n">vox_indices</span><span class="p">):</span>
+        <span class="c1"># compute the euclidian distance</span>
+        <span class="n">dist_latice</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">ind</span><span class="p">)]</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">spatial</span><span class="o">.</span><span class="n">distance</span><span class="o">.</span><span class="n">euclidean</span><span class="p">(</span><span class="n">cen</span><span class="p">,</span> <span class="n">noise_src</span><span class="p">)</span>
+
+    <span class="c1"># computing the noise lattice from dist lattice</span>
+    <span class="n">noise_latice</span> <span class="o">=</span> <span class="n">noise_base</span> <span class="o">-</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">dist_latice</span><span class="p">)</span> <span class="o">-</span> <span class="mi">8</span>
+
+    <span class="c1"># summing</span>
+    <span class="n">sum_noise_lats</span> <span class="o">+=</span> <span class="n">np</span><span class="o">.</span><span class="n">power</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">noise_latice</span> <span class="o">/</span> <span class="mf">10.0</span><span class="p">)</span>
+
+<span class="c1"># computing the final aggregation</span>
+<span class="n">agg_noise_lats</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">sum_noise_lats</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="22-store-noise-access-information-in-a-lattice">2.2. Store noise access information in a Lattice</h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">vis_lattice</span> <span class="o">=</span> <span class="n">agg_noise_lats</span>
+
+<span class="c1"># Create the spatial reference</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+
+<span class="c1"># Set the grid dimensions: shape because we want to inject our values</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">shape</span>
+<span class="c1"># The bottom left corner of the data set</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">minbound</span>
+<span class="c1"># These are the cell sizes along each axis</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">unit</span>
+
+<span class="c1"># Add the data values to the cell data</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s2">&quot;Noise&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>  <span class="c1"># Flatten the Lattice</span>
+
+
+<span class="c1"># adding the volume</span>
+<span class="n">opacity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">])</span><span class="o">*</span><span class="mf">1.5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span> <span class="p">,</span><span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">shade</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="0f8da8ce-fd4b-47b8-91f4-f5a5d411736a"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#0f8da8ce-fd4b-47b8-91f4-f5a5d411736a');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "00d6e9766c84431293ac3043e6e525c7", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(229.78838913964287, 134.78838913964287, 214.78838913964287),
+ (35.0, -60.0, 20.0),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#Convert the noise distaqnces to a ratio</span>
+<span class="n">agg_noise_ratio_lats</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span>  <span class="p">(</span> <span class="n">agg_noise_lats</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">agg_noise_lats</span><span class="p">))</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">agg_noise_lats</span><span class="p">)</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">agg_noise_lats</span><span class="p">))</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3-interpolation">3. Interpolation</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">interpolate</span><span class="p">(</span><span class="n">info_lowres</span><span class="p">,</span> <span class="n">base_highres</span><span class="p">):</span>
+    <span class="c1"># line spaces</span>
+    <span class="n">x_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">y_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">z_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="c1"># interpolation function</span>
+    <span class="n">interpolating_function</span> <span class="o">=</span> <span class="n">RegularGridInterpolator</span><span class="p">((</span><span class="n">x_space</span><span class="p">,</span> <span class="n">y_space</span><span class="p">,</span> <span class="n">z_space</span><span class="p">),</span> <span class="n">info_lowres</span><span class="p">,</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># high_res lattice</span>
+    <span class="n">envelope_lattice</span> <span class="o">=</span> <span class="n">base_highres</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># sample points</span>
+    <span class="n">sample_points</span> <span class="o">=</span> <span class="n">envelope_lattice</span><span class="o">.</span><span class="n">centroids</span>
+
+    <span class="c1"># interpolation</span>
+    <span class="n">interpolated_values</span> <span class="o">=</span> <span class="n">interpolating_function</span><span class="p">(</span><span class="n">sample_points</span><span class="p">)</span>
+
+    <span class="c1"># lattice construction</span>
+    <span class="n">info_highres</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">interpolated_values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">base_highres</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="n">base_highres</span><span class="p">)</span>
+
+    <span class="c1"># nulling the unavailable cells</span>
+    <span class="n">info_highres</span> <span class="o">*=</span> <span class="n">base_highres</span>
+
+    <span class="k">return</span> <span class="n">info_highres</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">noise_highres</span> <span class="o">=</span> <span class="n">interpolate</span><span class="p">(</span><span class="n">agg_noise_ratio_lats</span><span class="p">,</span> <span class="n">avail_lattice_highres</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-5-dae8e5aa3466&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>noise_highres <span class="ansi-yellow-intense-fg ansi-bold">=</span> interpolate<span class="ansi-yellow-intense-fg ansi-bold">(</span>agg_noise_ratio_lats<span class="ansi-yellow-intense-fg ansi-bold">,</span> avail_lattice_highres<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;interpolate&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># load the context and the envelope</span>
+<span class="n">envelope_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/compulsory_envelope.obj&quot;</span><span class="p">)</span>
+<span class="n">context_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/immediate_context.obj&quot;</span><span class="p">)</span>
+
+<span class="c1"># load the mesh from file</span>
+<span class="n">envelope_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">envelope_path</span><span class="p">)</span>
+<span class="n">context_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">context_path</span><span class="p">)</span>
+
+<span class="c1"># Check if the mesh is watertight</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">envelope_mesh</span><span class="o">.</span><span class="n">is_watertight</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">context_mesh</span><span class="o">.</span><span class="n">is_watertight</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>True
+False
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="31-visualize-the-interpolated-noise">3.1. Visualize the interpolated noise</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">vis_lattice</span> <span class="o">=</span> <span class="n">noise_highres</span>
+<span class="c1"># Create the spatial reference</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+
+<span class="c1"># Set the grid dimensions: shape because we want to inject our values</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">shape</span>
+<span class="c1"># The bottom left corner of the data set</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">minbound</span>
+<span class="c1"># These are the cell sizes along each axis</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">unit</span>
+
+<span class="c1"># Add the data values to the cell data</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s2">&quot;Noise Highress&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>  <span class="c1"># Flatten the Lattice</span>
+
+
+<span class="c1"># # adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+
+<span class="c1"># adding the volume</span>
+<span class="n">opacity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">])</span><span class="o">*</span><span class="mf">1.5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;plasma&quot;</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span><span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">shade</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">png_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../screen/quietness.png&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">screenshot</span> <span class="o">=</span> <span class="n">png_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-17-a65876a558d0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">     18</span> 
+<span class="ansi-green-fg">     19</span> <span class="ansi-red-intense-fg ansi-bold"># # adding the meshes</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 20</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>p<span class="ansi-yellow-intense-fg ansi-bold">.</span>add_mesh<span class="ansi-yellow-intense-fg ansi-bold">(</span>tri_to_pv<span class="ansi-yellow-intense-fg ansi-bold">(</span>context_mesh<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> opacity<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-cyan-intense-fg ansi-bold">0.1</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> style<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">&#39;wireframe&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     21</span> 
+<span class="ansi-green-fg">     22</span> 
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;tri_to_pv&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4-save-quietness-access-lattice-into-a-csv">4. Save Quietness Access Lattice into a CSV</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#select a path and a name to save the csv</span>
+<span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/quietness_highres.csv&#39;</span><span class="p">)</span>
+<span class="n">noise_highres</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="credits">Credits</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Shervin Azadi&quot;</span>
+<span class="n">__editor__</span> <span class="o">=</span> <span class="s1">&#39;Siebren Meines&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;MIT&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span>
+<span class="n">__url__</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/shervinazadi/spatial_computing_workshops&quot;</span>
+<span class="n">__summary__</span> <span class="o">=</span> <span class="s2">&quot;Noise interpolation calculation&quot;</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../3.1_lattices_skylight/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Skyview
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../3.3_lattice_public_entrances/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Distance calculation, Public entrances
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/EdaAkaltun/spatial_computing_project_template" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['search.suggest', 'search.share', 'header.autohide'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

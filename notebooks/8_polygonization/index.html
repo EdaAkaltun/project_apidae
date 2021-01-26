@@ -1,0 +1,2542 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../img/logo/apidae.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
+    
+    
+      
+        <title>Polygonization - Project Apidae</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.21aed14c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffc105">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tajawal:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Tajawal",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/ansi-colours.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#polygonization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Project Apidae" class="md-header-nav__button md-logo" aria-label="Project Apidae">
+      
+  <img src="../../img/logo/apidae_solo_black.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Project Apidae
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Polygonization
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Project Apidae" class="md-nav__button md-logo" aria-label="Project Apidae">
+      
+  <img src="../../img/logo/apidae_solo_black.png" alt="logo">
+
+    </a>
+    Project Apidae
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      A1_Planning
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A1_Planning" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        A1_Planning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A1_Planning/a1_planning_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A1_Planning/a1_planning_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      A2_Configuring
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A2_Configuring" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        A2_Configuring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A2_Configuring/a2_configuring_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A2_Configuring/a2_configuring_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      A3_Massing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A3_Massing" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        A3_Massing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A3_Massing/a3_massing_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A3_Massing/a3_massing_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    <label class="md-nav__link" for="nav-6">
+      A4_Forming
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A4_Forming" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        A4_Forming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A4_Forming/a4_forming_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A4_Forming/a4_forming_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Final_Deliverables/finalstuff/" class="md-nav__link">
+      Final_Deliverables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    <label class="md-nav__link" for="nav-8">
+      Index
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Index" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Index
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" checked>
+    <label class="md-nav__link" for="nav-8-1">
+      Scripts
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Scripts" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1_voxelization/" class="md-nav__link">
+      Voxelization highres and lowres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.1_lattice_sun_and_shadow/" class="md-nav__link">
+      Sun and shadow analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.2_full_lattice_sun_sky_blocking/" class="md-nav__link">
+      Sun block analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.1_lattices_skylight/" class="md-nav__link">
+      Skyview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.2_lattice_quietness/" class="md-nav__link">
+      Quietness
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.3_lattice_public_entrances/" class="md-nav__link">
+      Distance calculation, Public entrances
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.4_lattice_gym/" class="md-nav__link">
+      Distance calculation, Gym entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.5_lattice_parking_entrance/" class="md-nav__link">
+      Distance calculation, Parking entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.6_lattice_housing/" class="md-nav__link">
+      Distance calculation, Housing entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.7_lattice_comcen_entrance/" class="md-nav__link">
+      Distance calculation, Comunity Center entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4_full_lattice_minus_greenery/" class="md-nav__link">
+      Full lattice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.1_corridors_groundfloor/" class="md-nav__link">
+      Corridors ground floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.2_corridors_upper_floors/" class="md-nav__link">
+      Corridors upper floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.3_shafts/" class="md-nav__link">
+      Shafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6.1_lattice_distance_community/" class="md-nav__link">
+      Distance calculation, ground floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6.2_lattice_distance_upper_floors/" class="md-nav__link">
+      Distance calculation, upper floors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../7_ABM_growth/" class="md-nav__link">
+      Agent Based Model growth simulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Polygonization
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Polygonization
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-initialization" class="md-nav__link">
+    0. Initialization
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#00-importing-libraries" class="md-nav__link">
+    0.0. Importing libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#01-generate-symmetry-stencils" class="md-nav__link">
+    0.1. Generate Symmetry Stencils
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-generate-lattices-for-all-possible-cubes" class="md-nav__link">
+    0.2. Generate lattices for all possible cubes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-profiling" class="md-nav__link">
+    1. Profiling
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Profiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-catalogue-the-profile-of-all-corners" class="md-nav__link">
+    1.1. Catalogue the profile of all corners
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-find-unique-corner-profiles" class="md-nav__link">
+    1.2. Find unique corner profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-construct-unique-profile-latices" class="md-nav__link">
+    1.3. Construct unique profile latices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-visualize-unique-profiles" class="md-nav__link">
+    1.4. Visualize unique profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-save-unique-arrangement-profiles" class="md-nav__link">
+    1.5. Save unique arrangement profiles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-construct-the-tile-set" class="md-nav__link">
+    2. Construct the tile-set
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Construct the tile-set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-load-sub-tile-meshes" class="md-nav__link">
+    2.1. Load sub-tile meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-combine-sub-tile-meshes-to-create-tile-meshes" class="md-nav__link">
+    2.2. Combine sub-tile meshes to create tile meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-visualize-tile-meshes" class="md-nav__link">
+    2.3. Visualize tile meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-save-the-tile-set" class="md-nav__link">
+    2.4. Save the tile-set
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-boolean-marching-cube" class="md-nav__link">
+    3. Boolean Marching Cube
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Boolean Marching Cube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-load-envelope-lattice" class="md-nav__link">
+    3.1. Load envelope lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-the-interior-voxels" class="md-nav__link">
+    Removing the interior voxels
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing the interior voxels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clean-up-the-geometry-make-the-script-run-smoother" class="md-nav__link">
+    Clean up the geometry, make the script run smoother
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-roof-lattice" class="md-nav__link">
+    Creating the roof lattice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-singular-facade" class="md-nav__link">
+    Selecting singular facade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-ground-floor" class="md-nav__link">
+    Selecting Ground Floor
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting Ground Floor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32-extract-the-cube-lattice-from-the-envelope-lattice" class="md-nav__link">
+    3.2. Extract the cube lattice from the envelope lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/figures/" class="md-nav__link">
+      Figures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/presentations/" class="md-nav__link">
+      Presentations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/bibliography/" class="md-nav__link">
+      Bibliography
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+    <label class="md-nav__link" for="nav-9">
+      Documenting (TBR)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Documenting (TBR)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/instructions/" class="md-nav__link">
+      Instructions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/folder_structure/" class="md-nav__link">
+      Folder Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../quotes/" class="md-nav__link">
+      Quotes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../reflection/" class="md-nav__link">
+      Reflection
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-initialization" class="md-nav__link">
+    0. Initialization
+  </a>
+  
+    <nav class="md-nav" aria-label="0. Initialization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#00-importing-libraries" class="md-nav__link">
+    0.0. Importing libraries
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#01-generate-symmetry-stencils" class="md-nav__link">
+    0.1. Generate Symmetry Stencils
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-generate-lattices-for-all-possible-cubes" class="md-nav__link">
+    0.2. Generate lattices for all possible cubes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-profiling" class="md-nav__link">
+    1. Profiling
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Profiling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-catalogue-the-profile-of-all-corners" class="md-nav__link">
+    1.1. Catalogue the profile of all corners
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-find-unique-corner-profiles" class="md-nav__link">
+    1.2. Find unique corner profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-construct-unique-profile-latices" class="md-nav__link">
+    1.3. Construct unique profile latices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-visualize-unique-profiles" class="md-nav__link">
+    1.4. Visualize unique profiles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-save-unique-arrangement-profiles" class="md-nav__link">
+    1.5. Save unique arrangement profiles
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-construct-the-tile-set" class="md-nav__link">
+    2. Construct the tile-set
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Construct the tile-set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-load-sub-tile-meshes" class="md-nav__link">
+    2.1. Load sub-tile meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-combine-sub-tile-meshes-to-create-tile-meshes" class="md-nav__link">
+    2.2. Combine sub-tile meshes to create tile meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-visualize-tile-meshes" class="md-nav__link">
+    2.3. Visualize tile meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-save-the-tile-set" class="md-nav__link">
+    2.4. Save the tile-set
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-boolean-marching-cube" class="md-nav__link">
+    3. Boolean Marching Cube
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Boolean Marching Cube">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-load-envelope-lattice" class="md-nav__link">
+    3.1. Load envelope lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-the-interior-voxels" class="md-nav__link">
+    Removing the interior voxels
+  </a>
+  
+    <nav class="md-nav" aria-label="Removing the interior voxels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clean-up-the-geometry-make-the-script-run-smoother" class="md-nav__link">
+    Clean up the geometry, make the script run smoother
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-the-roof-lattice" class="md-nav__link">
+    Creating the roof lattice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-singular-facade" class="md-nav__link">
+    Selecting singular facade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#selecting-ground-floor" class="md-nav__link">
+    Selecting Ground Floor
+  </a>
+  
+    <nav class="md-nav" aria-label="Selecting Ground Floor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32-extract-the-cube-lattice-from-the-envelope-lattice" class="md-nav__link">
+    3.2. Extract the cube lattice from the envelope lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+(function() {
+  function addWidgetsRenderer() {
+    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
+    var scriptElement = document.createElement('script');
+    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    var widgetState;
+
+    // Fallback for older version:
+    try {
+      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
+
+      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
+        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
+      }
+    } catch(e) {}
+
+    scriptElement.src = widgetRendererSrc;
+    document.body.appendChild(scriptElement);
+  }
+
+  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
+}());
+</script>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="polygonization">Polygonization</h1>
+<p>In this workshop we will learn how to convert our topological model of the building into a geometric model.
+This script turns a topological model of a building into a geometric model. </p>
+<p>As input it takes an envelope lattice. </p>
+<p>In chapter 0 and 1 you can create symmetry stencills, and save unique profile lattices. 
+In chapter 2 you can load a sub-tile set and generate the complete tile set. </p>
+<p>In chapter 3 you can, using the boolean marching cube algorithm create your geometry based on the tileset(s)</p>
+<p>chapter 3 can run seperatly without chapter 0,1 and 2</p>
+<p>It is possible to use stencills to select different parts of the building and run a different tile set on each stencill. 
+In this code, there is a different tileset for the roof,groundfloor, facade in y direction, and 4 for the variation in the x direction.</p>
+<p>As output this script generates a meshed geometry. Unfortunately without texture. </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="0-initialization">0. Initialization</h2>
+<h3 id="00-importing-libraries">0.0. Importing libraries</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">topogenesis</span> <span class="k">as</span> <span class="nn">tg</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">trimesh</span> <span class="k">as</span> <span class="nn">tm</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">resources.boolean_marching_cubes</span> <span class="k">as</span> <span class="nn">bmc</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="01-generate-symmetry-stencils">0.1. Generate Symmetry Stencils</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">sym_str</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;OO&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;XX&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;YY&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;ZP&quot;</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;ZN&quot;</span><span class="p">]]</span>
+<span class="n">stencils</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">create_symmetry_stencils</span><span class="p">(</span><span class="n">sym_str</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">stencils</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>[[[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+
+ [[0 0 0]
+  [0 1 0]
+  [0 0 0]]
+
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]]
+-----
+[[[0 0 0]
+  [0 1 0]
+  [0 0 0]]
+
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+
+ [[0 0 0]
+  [0 1 0]
+  [0 0 0]]]
+-----
+[[[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+
+ [[0 1 0]
+  [0 0 0]
+  [0 1 0]]
+
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]]
+-----
+[[[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+
+ [[0 0 0]
+  [0 0 1]
+  [0 0 0]]
+
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]]
+-----
+[[[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+
+ [[0 0 0]
+  [1 0 0]
+  [0 0 0]]
+
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]]
+-----
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="02-generate-lattices-for-all-possible-cubes">0.2. Generate lattices for all possible cubes</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># generate bianary representation of all the possible cubes</span>
+<span class="n">l_bis</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">bi_cube_lattices</span><span class="p">()</span>
+<span class="n">l_bis</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>lattice([[[0, 0],
+          [0, 0]],
+
+         [[0, 0],
+          [1, 1]]])</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1-profiling">1. Profiling</h2>
+<h3 id="11-catalogue-the-profile-of-all-corners">1.1. Catalogue the profile of all corners</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># find all unique corner arrangements based on stencils</span>
+<span class="n">corner_profiles</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">extract_corner_profiles</span><span class="p">(</span><span class="n">stencils</span><span class="p">,</span> <span class="n">l_bis</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="12-find-unique-corner-profiles">1.2. Find unique corner profiles</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># stack corner_profiles vertically</span>
+<span class="n">cp_stacked</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">(</span><span class="n">corner_profiles</span><span class="p">)</span>
+
+<span class="c1"># find the uniqe arangements of corners</span>
+<span class="n">uniq_corner_arang</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">cp_stacked</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cp_stacked</span><span class="p">)</span>
+<span class="c1">#print(uniq_corner_arang)</span>
+<span class="c1">#print(len(uniq_corner_arang))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cp_stacked</span><span class="p">))</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>[[0 0 0 0 0]
+ [0 0 0 0 0]
+ [0 0 0 0 0]
+ ...
+ [1 1 1 0 1]
+ [1 1 1 1 0]
+ [1 1 1 0 1]]
+2048
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="13-construct-unique-profile-latices">1.3. Construct unique profile latices</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># construct lattices for all unique corner profiles</span>
+<span class="p">(</span><span class="n">corner_loc_lattices</span><span class="p">,</span> <span class="n">corner_neigh_lattices</span><span class="p">)</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">profiles_to_lattices</span><span class="p">(</span><span class="n">uniq_corner_arang</span><span class="p">,</span> <span class="n">stencils</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="14-visualize-unique-profiles">1.4. Visualize unique profiles</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">base_lattice</span> <span class="o">=</span> <span class="n">corner_neigh_lattices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Set the grid dimensions: shape + 1 because we want to inject our values on the CELL data</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">base_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># The bottom left corner of the data set</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">base_lattice</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">base_lattice</span><span class="o">.</span><span class="n">unit</span> <span class="o">*</span> <span class="mf">0.5</span>
+<span class="c1"># These are the cell sizes along each axis</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">base_lattice</span><span class="o">.</span><span class="n">unit</span> 
+
+<span class="c1"># adding the boundingbox wireframe</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Domain&quot;</span><span class="p">)</span>
+
+<span class="c1"># adding axes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_axes</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show_bounds</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="s2">&quot;back&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;back&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#aaaaaa&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">create_mesh</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">lattice</span> <span class="o">=</span> <span class="n">corner_neigh_lattices</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+    <span class="n">loc</span> <span class="o">=</span> <span class="n">corner_loc_lattices</span><span class="p">[</span><span class="n">f</span><span class="p">]</span>
+
+    <span class="c1"># Add the data values to the cell data</span>
+    <span class="n">grid</span><span class="o">.</span><span class="n">cell_arrays</span><span class="p">[</span><span class="s2">&quot;filled&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>  <span class="c1"># Flatten the array!</span>
+    <span class="c1"># filtering the voxels</span>
+    <span class="n">threshed</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">threshold</span><span class="p">([</span><span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">],</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;filled&quot;</span><span class="p">)</span>
+    <span class="c1"># adding the voxels</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">threshed</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sphere&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="c1"># Add the data values to the cell data</span>
+    <span class="n">grid</span><span class="o">.</span><span class="n">cell_arrays</span><span class="p">[</span><span class="s2">&quot;corner&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">loc</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="c1"># Flatten the array!</span>
+    <span class="c1"># filtering the voxels</span>
+    <span class="n">threshed</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">threshold</span><span class="p">([</span><span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">],</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;corner&quot;</span><span class="p">)</span>
+    <span class="c1"># adding the voxels</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">threshed</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sphere2&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">add_slider_widget</span><span class="p">(</span><span class="n">create_mesh</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">corner_neigh_lattices</span><span class="p">)],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Arrangements&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">event_type</span><span class="o">=</span><span class="s2">&quot;always&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;classic&quot;</span><span class="p">,</span> <span class="n">pointa</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">pointb</span><span class="o">=</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="43c8cbdd-f1aa-47eb-b97a-5e48cb174293"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#43c8cbdd-f1aa-47eb-b97a-5e48cb174293');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "d8df1be3736b43d5ad8cb512f6e5b89f", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(4.363703305156274, 4.363703305156274, 4.363703305156274),
+ (0.5, 0.5, 0.5),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="15-save-unique-arrangement-profiles">1.5. Save unique arrangement profiles</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># save all design templates into lattice CSVs</span>
+<span class="n">templates_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_templates&#39;</span><span class="p">)</span>
+<span class="n">bmc</span><span class="o">.</span><span class="n">save_design_templates</span><span class="p">(</span><span class="n">corner_loc_lattices</span><span class="p">,</span> <span class="n">corner_neigh_lattices</span><span class="p">,</span> <span class="n">templates_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2-construct-the-tile-set">2. Construct the tile-set</h2>
+<h3 id="21-load-sub-tile-meshes">2.1. Load sub-tile meshes</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># load subtile meshes</span>
+<span class="n">subtile_meshes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">corner_loc_lattices</span><span class="p">)):</span>
+    <span class="n">corner_mesh_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/balcony_top/t_&#39;</span> <span class="o">+</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">c</span><span class="si">:</span><span class="s1">02</span><span class="si">}</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="s1">&#39;.obj&#39;</span><span class="p">)</span>
+    <span class="n">corner_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">corner_mesh_path</span><span class="p">)</span>
+    <span class="n">subtile_meshes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">corner_mesh</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="22-combine-sub-tile-meshes-to-create-tile-meshes">2.2. Combine sub-tile meshes to create tile meshes</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">tiles_meshes</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">construct_tile_meshes</span><span class="p">(</span><span class="n">subtile_meshes</span><span class="p">,</span> <span class="n">corner_profiles</span><span class="p">,</span> <span class="n">uniq_corner_arang</span><span class="p">,</span> <span class="n">corner_loc_lattices</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="23-visualize-tile-meshes">2.3. Visualize tile meshes</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># convert mesh to pv_mesh</span>
+<span class="k">def</span> <span class="nf">tri_to_pv</span><span class="p">(</span><span class="n">tri_mesh</span><span class="p">):</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">faces</span><span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">pv_mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pv_mesh</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">base_lattice</span> <span class="o">=</span> <span class="n">l_bis</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="c1"># Set the grid dimensions: shape + 1 because we want to inject our values on the CELL data</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">base_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># The bottom left cornerempty of the data set</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">base_lattice</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">base_lattice</span><span class="o">.</span><span class="n">unit</span> <span class="o">*</span> <span class="mf">0.5</span> 
+<span class="c1"># These are the cell sizes along each axis</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">base_lattice</span><span class="o">.</span><span class="n">unit</span> <span class="o">*</span><span class="mf">0.5</span>
+
+<span class="c1"># adding the boundingbox wireframe</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">grid</span><span class="o">.</span><span class="n">outline</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Domain&quot;</span><span class="p">)</span>
+
+<span class="c1"># adding axes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_axes</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show_bounds</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="s2">&quot;back&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;back&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#aaaaaa&quot;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">create_mesh</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="n">mesh</span> <span class="o">=</span> <span class="n">tiles_meshes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">lattice</span> <span class="o">=</span> <span class="n">l_bis</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="c1"># Add the data values to the cell data</span>
+    <span class="n">grid</span><span class="o">.</span><span class="n">cell_arrays</span><span class="p">[</span><span class="s2">&quot;cube&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span><span class="c1"># Flatten the array!</span>
+    <span class="c1"># filtering the voxels</span>
+    <span class="n">threshed</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">threshold</span><span class="p">([</span><span class="o">.</span><span class="mi">9</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">],</span> <span class="n">scalars</span><span class="o">=</span><span class="s2">&quot;cube&quot;</span><span class="p">)</span>
+    <span class="c1"># adding the voxels</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">threshed</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;sphere2&#39;</span><span class="p">,</span> <span class="n">show_edges</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">show_scalar_bar</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
+
+    <span class="c1"># adding the meshes</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">mesh</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#abd8ff&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sphere&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">add_slider_widget</span><span class="p">(</span><span class="n">create_mesh</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tiles_meshes</span><span class="p">)],</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Tiles&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">event_type</span><span class="o">=</span><span class="s2">&quot;always&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;classic&quot;</span><span class="p">,</span> <span class="n">pointa</span><span class="o">=</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">),</span> <span class="n">pointb</span><span class="o">=</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">))</span>
+
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="21778ab1-2751-4c49-9749-bda480938196"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#21778ab1-2751-4c49-9749-bda480938196');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "edff1dc1698d4bd4b5445bcdc0e61b3f", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(1.9318516525781368, 1.9318516525781368, 1.9318516525781368),
+ (0.0, 0.0, 0.0),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="24-save-the-tile-set">2.4. Save the tile-set</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">tiles_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_tiles_balconytop&#39;</span><span class="p">)</span>
+<span class="n">bmc</span><span class="o">.</span><span class="n">save_tile_meshes</span><span class="p">(</span><span class="n">tiles_meshes</span><span class="p">,</span> <span class="n">l_bis</span><span class="p">,</span> <span class="n">tiles_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">topogenesis</span> <span class="k">as</span> <span class="nn">tg</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">trimesh</span> <span class="k">as</span> <span class="nn">tm</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">resources.boolean_marching_cubes</span> <span class="k">as</span> <span class="nn">bmc</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3-boolean-marching-cube">3. Boolean Marching Cube</h2>
+<h3 id="31-load-envelope-lattice">3.1. Load envelope lattice</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># loading the lattice from csv</span>
+<span class="n">lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/final_lattice_ihope_x2PLS.csv&#39;</span><span class="p">)</span>
+
+<span class="n">envelope_lattice_0</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">lattice_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="removing-the-interior-voxels">Removing the interior voxels</h2>
+<h4 id="clean-up-the-geometry-make-the-script-run-smoother">Clean up the geometry, make the script run smoother</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># create the stencil</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">create_stencil</span><span class="p">(</span><span class="s2">&quot;von_neumann&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># add the sum function to the stencil</span>
+<span class="n">s</span><span class="o">.</span><span class="n">function</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">sfunc</span><span class="o">.</span><span class="n">sum</span> 
+
+<span class="c1"># apply the stencil on the lattice</span>
+<span class="n">neighbor_sum</span> <span class="o">=</span> <span class="n">envelope_lattice_0</span><span class="o">.</span><span class="n">apply_stencil</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="c1"># remove if less than 6</span>
+<span class="n">new_envelope_lattice</span> <span class="o">=</span> <span class="n">envelope_lattice_0</span> <span class="o">*</span> <span class="p">(</span><span class="n">neighbor_sum</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">new_envelope_lattice_expanded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">new_envelope_lattice</span><span class="p">,</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">new_envelope_lattice_expanded</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">new_envelope_lattice_expanded</span><span class="p">,</span> <span class="n">new_envelope_lattice</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">new_envelope_lattice</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="n">new_envelope_lattice</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="creating-the-roof-lattice">Creating the roof lattice</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">s</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">create_stencil</span><span class="p">(</span><span class="s2">&quot;von_neumann&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">s</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">s</span><span class="o">.</span><span class="n">function</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">sfunc</span><span class="o">.</span><span class="n">sum</span>
+
+<span class="n">upsum_lattice</span> <span class="o">=</span> <span class="n">envelope_lattice_0</span><span class="o">.</span><span class="n">apply_stencil</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">roof_lattice</span> <span class="o">=</span> <span class="p">(</span><span class="n">upsum_lattice</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="n">envelope_lattice_0</span>
+
+<span class="n">roof_lattice_expanded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">roof_lattice</span><span class="p">,</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">roof_lattice_expanded</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">roof_lattice_expanded</span><span class="p">,</span> <span class="n">roof_lattice</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">roof_lattice</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="n">roof_lattice</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">cube_roof_lattice</span> <span class="o">=</span> <span class="n">roof_lattice</span><span class="o">.</span><span class="n">boolean_marching_cubes</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="selecting-singular-facade">Selecting singular facade</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#every 2 other floor</span>
+<span class="n">avail_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">new_envelope_lattice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="k">for</span> <span class="n">vox_1d_ind</span> <span class="ow">in</span> <span class="n">avail_index</span><span class="p">:</span>
+    <span class="n">vox_3d_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">vox_1d_ind</span><span class="p">,</span> <span class="n">new_envelope_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">VX</span><span class="p">,</span> <span class="n">VY</span><span class="p">,</span> <span class="n">VZ</span> <span class="o">=</span> <span class="n">vox_3d_ind</span>
+
+
+<span class="n">regular_facade</span> <span class="o">=</span> <span class="n">new_envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="n">regular_facade</span><span class="p">[</span><span class="mi">1</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">regular_facade</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">15</span><span class="p">:</span><span class="mi">50</span><span class="p">,:]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">regular_facade</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">31</span><span class="p">:</span><span class="mi">50</span><span class="p">,:]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">regular_facade</span><span class="p">[</span><span class="mi">83</span><span class="p">,:,:]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">regular_facade</span> <span class="o">*=</span> <span class="n">new_envelope_lattice</span>
+
+<span class="n">regular_facade_expanded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">regular_facade</span><span class="p">,</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">regular_facade_expanded</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">regular_facade_expanded</span><span class="p">,</span> <span class="n">regular_facade</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">regular_facade</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="n">regular_facade</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="selecting-ground-floor">Selecting Ground Floor</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># Finding the index of the available voxels in avail_lattice</span>
+<span class="n">avail_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">new_envelope_lattice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="k">for</span> <span class="n">vox_1d_ind</span> <span class="ow">in</span> <span class="n">avail_index</span><span class="p">:</span>
+    <span class="n">vox_3d_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">vox_1d_ind</span><span class="p">,</span> <span class="n">new_envelope_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">VX</span><span class="p">,</span> <span class="n">VY</span><span class="p">,</span> <span class="n">VZ</span> <span class="o">=</span> <span class="n">vox_3d_ind</span>
+
+<span class="c1"># Ground Floor</span>
+<span class="n">ground_floor_lattice</span> <span class="o">=</span> <span class="n">new_envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="n">ground_floor_lattice</span><span class="p">[:,:,:</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">ground_floor_lattice</span> <span class="o">*=</span> <span class="n">new_envelope_lattice</span>
+
+<span class="n">ground_floor_lattice_expanded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">ground_floor_lattice</span><span class="p">,</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ground_floor_lattice_expanded</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">ground_floor_lattice_expanded</span><span class="p">,</span> <span class="n">ground_floor_lattice</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">ground_floor_lattice</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="n">ground_floor_lattice</span><span class="o">.</span><span class="n">unit</span> <span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-12-13ee909de582&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      1</span> <span class="ansi-red-intense-fg ansi-bold"># Finding the index of the available voxels in avail_lattice</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>avail_index <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>array<span class="ansi-yellow-intense-fg ansi-bold">(</span>np<span class="ansi-yellow-intense-fg ansi-bold">.</span>where<span class="ansi-yellow-intense-fg ansi-bold">(</span>new_envelope_lattice <span class="ansi-yellow-intense-fg ansi-bold">==</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>T
+<span class="ansi-green-fg">      3</span> 
+<span class="ansi-green-fg">      4</span> <span class="ansi-green-intense-fg ansi-bold">for</span> vox_1d_ind <span class="ansi-green-intense-fg ansi-bold">in</span> avail_index<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-fg">      5</span>     vox_3d_ind <span class="ansi-yellow-intense-fg ansi-bold">=</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>unravel_index<span class="ansi-yellow-intense-fg ansi-bold">(</span>vox_1d_ind<span class="ansi-yellow-intense-fg ansi-bold">,</span> new_envelope_lattice<span class="ansi-yellow-intense-fg ansi-bold">.</span>shape<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;new_envelope_lattice&#39; is not defined</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">envelope_lattice</span> <span class="o">=</span> <span class="n">new_envelope_lattice_expanded</span> <span class="o">-</span> <span class="n">ground_floor_lattice_expanded</span> <span class="o">-</span> <span class="n">regular_facade_expanded</span> <span class="o">-</span> <span class="n">roof_lattice_expanded</span>
+<span class="n">regular_facade_expanded</span> <span class="o">=</span> <span class="n">regular_facade_expanded</span> <span class="o">-</span> <span class="n">ground_floor_lattice_expanded</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">ground_floor_cube_lattice</span><span class="o">=</span> <span class="n">ground_floor_lattice_expanded</span><span class="o">.</span><span class="n">boolean_marching_cubes</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">regular_facade_cube</span> <span class="o">=</span> <span class="n">regular_facade_expanded</span><span class="o">.</span><span class="n">boolean_marching_cubes</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="32-extract-the-cube-lattice-from-the-envelope-lattice">3.2. Extract the cube lattice from the envelope lattice</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="facade-part-1">Facade part 1</h1>
+<h4 id="repeats-on-the-1st-4-and-2nd4-floor-and-in-the-x-direction-as-23">repeats on the 1st ::4 and 2nd::4 floor and in the x  direction as 2::3</h4>
+<h4 id="repeats-on-the-3rd4-and-4th4-floor-and-in-the-x-direction-as-03">repeats on the 3rd::4 and 4th::4 floor and in the x  direction as 0::3</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">avail_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">envelope_lattice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="k">for</span> <span class="n">vox_1d_ind</span> <span class="ow">in</span> <span class="n">avail_index</span><span class="p">:</span>
+    <span class="n">vox_3d_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">vox_1d_ind</span><span class="p">,</span> <span class="n">envelope_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">VX</span><span class="p">,</span> <span class="n">VY</span><span class="p">,</span> <span class="n">VZ</span> <span class="o">=</span> <span class="n">vox_3d_ind</span>
+
+<span class="n">facade_part_1</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="n">facade_part_1</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">1</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">facade_part_1</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">2</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">facade_part_1</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">3</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">facade_part_1</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">4</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+
+<span class="n">facade_part_1</span> <span class="o">*=</span> <span class="n">envelope_lattice</span>
+
+<span class="n">facade_part_1_expanded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">facade_part_1</span><span class="p">,</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">facade_part_1_expanded</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">facade_part_1_expanded</span><span class="p">,</span> <span class="n">facade_part_1</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">facade_part_1</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="n">facade_part_1</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">facade_1_cube</span>  <span class="o">=</span> <span class="n">facade_part_1_expanded</span><span class="o">.</span><span class="n">boolean_marching_cubes</span><span class="p">()</span> 
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="facade-part-2">Facade part 2</h1>
+<h4 id="repeats-on-the-3st-4-floor-and-in-the-x-direction-as-13">repeats on the 3st ::4 floor and in the x  direction as 1::3</h4>
+<h4 id="repeats-on-the-1st4-floor-and-in-the-x-direction-as-33">repeats on the 1st::4 floor and in the x  direction as 3::3</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">avail_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">envelope_lattice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="k">for</span> <span class="n">vox_1d_ind</span> <span class="ow">in</span> <span class="n">avail_index</span><span class="p">:</span>
+    <span class="n">vox_3d_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">vox_1d_ind</span><span class="p">,</span> <span class="n">envelope_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">VX</span><span class="p">,</span> <span class="n">VY</span><span class="p">,</span> <span class="n">VZ</span> <span class="o">=</span> <span class="n">vox_3d_ind</span>
+
+<span class="n">facade_part_2</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="n">facade_part_2</span><span class="p">[</span><span class="mi">3</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">1</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">facade_part_2</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">3</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">facade_part_2</span> <span class="o">*=</span> <span class="n">envelope_lattice</span>
+
+<span class="n">facade_part_2_expanded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">facade_part_2</span><span class="p">,</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">facade_part_2_expanded</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">facade_part_2_expanded</span><span class="p">,</span> <span class="n">facade_part_2</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">facade_part_2</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="n">facade_part_2</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">facade_2_cube</span>  <span class="o">=</span> <span class="n">facade_part_2_expanded</span><span class="o">.</span><span class="n">boolean_marching_cubes</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="facade-part-3">Facade part 3</h1>
+<h4 id="repeats-on-the-4rd-4-floor-and-in-the-x-direction-as-13">repeats on the 4rd ::4 floor and in the x  direction as 1::3</h4>
+<h4 id="repeats-on-the-2nd4-floor-and-in-the-x-direction-as-33">repeats on the 2nd::4 floor and in the x  direction as 3::3</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">avail_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">envelope_lattice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="k">for</span> <span class="n">vox_1d_ind</span> <span class="ow">in</span> <span class="n">avail_index</span><span class="p">:</span>
+    <span class="n">vox_3d_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">vox_1d_ind</span><span class="p">,</span> <span class="n">envelope_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">VX</span><span class="p">,</span> <span class="n">VY</span><span class="p">,</span> <span class="n">VZ</span> <span class="o">=</span> <span class="n">vox_3d_ind</span>
+
+<span class="n">facade_part_3</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="n">facade_part_3</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">4</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">facade_part_3</span><span class="p">[</span><span class="mi">3</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">2</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">facade_part_3</span> <span class="o">*=</span> <span class="n">envelope_lattice</span>
+
+<span class="n">facade_part_3_expanded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">facade_part_3</span><span class="p">,</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">facade_part_3_expanded</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">facade_part_3_expanded</span><span class="p">,</span> <span class="n">facade_part_3</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">facade_part_3</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="n">facade_part_3</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">facade_3_cube</span>  <span class="o">=</span> <span class="n">facade_part_3_expanded</span><span class="o">.</span><span class="n">boolean_marching_cubes</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="facade-part-4">Facade part 4</h1>
+<h4 id="repeats-on-the-1st4-and-2nd4-floor-and-in-the-x-direction-as-13">repeats on the 1st::4 and 2nd::4 floor and in the x  direction as 1::3</h4>
+<h4 id="repeats-on-the-3rd4-and-4th4-floor-and-in-the-x-direction-as-23">repeats on the 3rd::4 and 4th::4 floor and in the x  direction as 2::3</h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">avail_index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">envelope_lattice</span> <span class="o">==</span> <span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">T</span>
+
+<span class="k">for</span> <span class="n">vox_1d_ind</span> <span class="ow">in</span> <span class="n">avail_index</span><span class="p">:</span>
+    <span class="n">vox_3d_ind</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">vox_1d_ind</span><span class="p">,</span> <span class="n">envelope_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">VX</span><span class="p">,</span> <span class="n">VY</span><span class="p">,</span> <span class="n">VZ</span> <span class="o">=</span> <span class="n">vox_3d_ind</span>
+
+<span class="n">facade_part_4</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span>
+<span class="n">facade_part_4</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">1</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">facade_part_4</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">2</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">facade_part_4</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">3</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">facade_part_4</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">3</span><span class="p">,:,</span><span class="mi">4</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">facade_part_4</span> <span class="o">*=</span> <span class="n">envelope_lattice</span>
+
+<span class="n">facade_part_4_expanded</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">facade_part_4</span><span class="p">,</span> <span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">facade_part_4_expanded</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">facade_part_4_expanded</span><span class="p">,</span> <span class="n">facade_part_4</span><span class="o">.</span><span class="n">minbound</span> <span class="o">-</span> <span class="n">facade_part_4</span><span class="o">.</span><span class="n">unit</span><span class="p">,</span> <span class="n">facade_part_4</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>   
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">facade_4_cube</span>  <span class="o">=</span> <span class="n">facade_part_4_expanded</span><span class="o">.</span><span class="n">boolean_marching_cubes</span><span class="p">()</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="33-tile-the-cube-lattice-with-a-tileset">3.3. tile the cube lattice with a tileset</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#loading the tilepaths</span>
+<span class="n">groundfloor_tiles_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_tiles_groundfloor&#39;</span><span class="p">)</span>
+<span class="n">roof_tiles_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_tiles_roof&#39;</span><span class="p">)</span>
+<span class="n">doublewindow_tiles_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_tiles_doublewindow&#39;</span><span class="p">)</span>
+<span class="n">balconybottom_tiles_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_tiles_balconybottom&#39;</span><span class="p">)</span>
+<span class="n">balconytop_tiles_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_tiles_balconytop&#39;</span><span class="p">)</span>
+<span class="n">flat_tiles_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_flat_tiles&#39;</span><span class="p">)</span>
+<span class="n">regular_facade_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/bmc/bmc_tiles_regular_facade&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#doing the boolean marching cube algorithm per building part with its desired tilepath</span>
+<span class="c1">#these are split, to save RAM. </span>
+<span class="n">bmc_mesh_1</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">marching_cube_mesh</span><span class="p">(</span><span class="n">ground_floor_cube_lattice</span><span class="p">,</span> <span class="n">groundfloor_tiles_path</span><span class="p">)</span>
+<span class="n">bmc_mesh_2</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">marching_cube_mesh</span><span class="p">(</span><span class="n">cube_roof_lattice</span><span class="p">,</span> <span class="n">roof_tiles_path</span><span class="p">)</span>
+<span class="n">bmc_mesh_3</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">marching_cube_mesh</span><span class="p">(</span><span class="n">facade_1_cube</span><span class="p">,</span> <span class="n">doublewindow_tiles_path</span><span class="p">)</span>
+<span class="n">bmc_mesh_4</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">marching_cube_mesh</span><span class="p">(</span><span class="n">facade_2_cube</span><span class="p">,</span> <span class="n">balconybottom_tiles_path</span><span class="p">)</span>
+<span class="n">bmc_mesh_5</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">marching_cube_mesh</span><span class="p">(</span><span class="n">facade_3_cube</span><span class="p">,</span> <span class="n">balconytop_tiles_path</span><span class="p">)</span>
+<span class="n">bmc_mesh_6</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">marching_cube_mesh</span><span class="p">(</span><span class="n">facade_4_cube</span><span class="p">,</span> <span class="n">flat_tiles_path</span><span class="p">)</span>
+<span class="n">bmc_mesh_7</span> <span class="o">=</span> <span class="n">bmc</span><span class="o">.</span><span class="n">marching_cube_mesh</span><span class="p">(</span><span class="n">regular_facade_cube</span><span class="p">,</span> <span class="n">regular_facade_path</span><span class="p">)</span>
+
+<span class="c1">#adding the boolean marching cubes together</span>
+<span class="n">bmc_mesh</span> <span class="o">=</span> <span class="n">bmc_mesh_1</span> <span class="o">+</span> <span class="n">bmc_mesh_2</span> <span class="o">+</span> <span class="n">bmc_mesh_3</span> <span class="o">+</span> <span class="n">bmc_mesh_4</span>  <span class="o">+</span> <span class="n">bmc_mesh_5</span> <span class="o">+</span> <span class="n">bmc_mesh_6</span> <span class="o">+</span> <span class="n">bmc_mesh_7</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>[[-40.5 -99.9  -0.9]
+ [-40.5 -99.9   0.9]
+ [-40.5 -99.9   2.7]
+ ...
+ [112.5 -15.3  33.3]
+ [112.5 -15.3  35.1]
+ [112.5 -15.3  36.9]]
+[[-38.7 -98.1   0.9]
+ [-38.7 -98.1   2.7]
+ [-38.7 -98.1   4.5]
+ ...
+ [110.7 -17.1  31.5]
+ [110.7 -17.1  33.3]
+ [110.7 -17.1  35.1]]
+[[ -42.3 -101.7   -2.7]
+ [ -42.3 -101.7   -0.9]
+ [ -42.3 -101.7    0.9]
+ ...
+ [ 114.3  -13.5   35.1]
+ [ 114.3  -13.5   36.9]
+ [ 114.3  -13.5   38.7]]
+[[ -42.3 -101.7   -2.7]
+ [ -42.3 -101.7   -0.9]
+ [ -42.3 -101.7    0.9]
+ ...
+ [ 114.3  -13.5   35.1]
+ [ 114.3  -13.5   36.9]
+ [ 114.3  -13.5   38.7]]
+[[ -42.3 -101.7   -2.7]
+ [ -42.3 -101.7   -0.9]
+ [ -42.3 -101.7    0.9]
+ ...
+ [ 114.3  -13.5   35.1]
+ [ 114.3  -13.5   36.9]
+ [ 114.3  -13.5   38.7]]
+[[ -42.3 -101.7   -2.7]
+ [ -42.3 -101.7   -0.9]
+ [ -42.3 -101.7    0.9]
+ ...
+ [ 114.3  -13.5   35.1]
+ [ 114.3  -13.5   36.9]
+ [ 114.3  -13.5   38.7]]
+[[-40.5 -99.9  -0.9]
+ [-40.5 -99.9   0.9]
+ [-40.5 -99.9   2.7]
+ ...
+ [112.5 -15.3  33.3]
+ [112.5 -15.3  35.1]
+ [112.5 -15.3  36.9]]
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="34-visualize-the-final-mesh">3.4. Visualize the final mesh</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># convert mesh to pv_mesh</span>
+<span class="k">def</span> <span class="nf">tri_to_pv</span><span class="p">(</span><span class="n">tri_mesh</span><span class="p">):</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">faces</span><span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">pv_mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pv_mesh</span>
+
+<span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">bmc_mesh</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">opacity</span><span class="o">=</span><span class="mi">1</span> <span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;sphere&quot;</span><span class="p">)</span>
+
+<span class="c1"># adding axes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_axes</span><span class="p">()</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show_bounds</span><span class="p">(</span><span class="n">grid</span><span class="o">=</span><span class="s2">&quot;back&quot;</span><span class="p">,</span> <span class="n">location</span><span class="o">=</span><span class="s2">&quot;back&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#aaaaaa&quot;</span><span class="p">)</span>
+
+<span class="c1"># fast visualization of the lattice</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">envelope_lattice_0</span><span class="o">.</span><span class="n">fast_vis</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># png_path = os.path.relpath(&#39;../screen/finalmodel.png&#39;)</span>
+<span class="c1"># p.show(screenshot = png_path)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="d6ae440d-59bf-4098-9880-9b34d733aac4"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#d6ae440d-59bf-4098-9880-9b34d733aac4');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "a028a85244634735b9403ea9186ae81a", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(235.5051936291799, 141.90519277087301, 217.50519440404028),
+ (36.0, -57.600000858306885, 18.000000774860382),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="35-save-the-final-mesh">3.5. Save the final mesh</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#Saving the generated geometry as a mesh. </span>
+<span class="n">final_mesh_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/final_mesh.obj&#39;</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">final_mesh_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">tm</span><span class="o">.</span><span class="n">exchange</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">export_obj</span><span class="p">(</span><span class="n">bmc_mesh</span><span class="p">))</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">KeyboardInterrupt</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-27-78861dcfb9c0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">      2</span> 
+<span class="ansi-green-fg">      3</span> <span class="ansi-green-intense-fg ansi-bold">with</span> open<span class="ansi-yellow-intense-fg ansi-bold">(</span>final_mesh_path<span class="ansi-yellow-intense-fg ansi-bold">,</span> <span class="ansi-blue-intense-fg ansi-bold">&#39;w&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">as</span> file<span class="ansi-yellow-intense-fg ansi-bold">:</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 4</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>file<span class="ansi-yellow-intense-fg ansi-bold">.</span>write<span class="ansi-yellow-intense-fg ansi-bold">(</span>tm<span class="ansi-yellow-intense-fg ansi-bold">.</span>exchange<span class="ansi-yellow-intense-fg ansi-bold">.</span>obj<span class="ansi-yellow-intense-fg ansi-bold">.</span>export_obj<span class="ansi-yellow-intense-fg ansi-bold">(</span>bmc_mesh<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\sc_docs\lib\site-packages\trimesh\exchange\obj.py</span> in <span class="ansi-cyan-fg">export_obj</span><span class="ansi-blue-intense-fg ansi-bold">(mesh, include_normals, include_color, include_texture, return_texture, write_texture, resolver, digits)</span>
+<span class="ansi-green-fg">    792</span>         <span class="ansi-red-intense-fg ansi-bold"># add the vertices</span>
+<span class="ansi-green-fg">    793</span>         export = deque(
+<span class="ansi-green-intense-fg ansi-bold">--&gt; 794</span><span class="ansi-yellow-intense-fg ansi-bold">             [&#39;v &#39; + util.array_to_string(
+</span><span class="ansi-green-fg">    795</span>                 v_blob<span class="ansi-yellow-intense-fg ansi-bold">,</span>
+<span class="ansi-green-fg">    796</span>                 col_delim<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">&#39; &#39;</span><span class="ansi-yellow-intense-fg ansi-bold">,</span>
+
+<span class="ansi-green-intense-fg ansi-bold">~\anaconda3\envs\sc_docs\lib\site-packages\trimesh\util.py</span> in <span class="ansi-cyan-fg">array_to_string</span><span class="ansi-blue-intense-fg ansi-bold">(array, col_delim, row_delim, digits, value_format)</span>
+<span class="ansi-green-fg">   1169</span> 
+<span class="ansi-green-fg">   1170</span>     <span class="ansi-red-intense-fg ansi-bold"># run the format operation and remove the extra delimiters</span>
+<span class="ansi-green-intense-fg ansi-bold">-&gt; 1171</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>formatted <span class="ansi-yellow-intense-fg ansi-bold">=</span> format_str<span class="ansi-yellow-intense-fg ansi-bold">.</span>format<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">*</span>shaped<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-yellow-intense-fg ansi-bold">-</span>end_junk<span class="ansi-yellow-intense-fg ansi-bold">]</span>
+<span class="ansi-green-fg">   1172</span> 
+<span class="ansi-green-fg">   1173</span>     <span class="ansi-green-intense-fg ansi-bold">return</span> formatted
+
+<span class="ansi-red-intense-fg ansi-bold">KeyboardInterrupt</span>: </pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="credits">Credits</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Shervin Azadi&quot;</span>
+<span class="n">__editro__</span> <span class="o">=</span> <span class="s1">&#39;Siebren Meines&#39;</span>
+<span class="n">__license__</span> <span class="o">=</span> <span class="s2">&quot;MIT&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span>
+<span class="n">__url__</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/shervinazadi/spatial_computing_workshops&quot;</span>
+<span class="n">__summary__</span> <span class="o">=</span> <span class="s2">&quot;Spatial Computing Design Studio Workshop on Polygonization&quot;</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../7_ABM_growth/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Agent Based Model growth simulation
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../index/figures/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Figures
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/EdaAkaltun/spatial_computing_project_template" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['search.suggest', 'search.share', 'header.autohide'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

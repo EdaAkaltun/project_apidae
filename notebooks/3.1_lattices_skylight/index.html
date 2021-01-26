@@ -1,0 +1,2442 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../img/logo/apidae.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.5">
+    
+    
+      
+        <title>Skyview - Project Apidae</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.21aed14c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffc105">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tajawal:300,400,400i,700%7C&display=fallback">
+        <style>body,input{font-family:"Tajawal",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../css/ansi-colours.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="deep-orange">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#skylight" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Project Apidae" class="md-header-nav__button md-logo" aria-label="Project Apidae">
+      
+  <img src="../../img/logo/apidae_solo_black.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Project Apidae
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Skyview
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Project Apidae" class="md-nav__button md-logo" aria-label="Project Apidae">
+      
+  <img src="../../img/logo/apidae_solo_black.png" alt="logo">
+
+    </a>
+    Project Apidae
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      A1_Planning
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A1_Planning" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        A1_Planning
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A1_Planning/a1_planning_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A1_Planning/a1_planning_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+    <label class="md-nav__link" for="nav-4">
+      A2_Configuring
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A2_Configuring" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        A2_Configuring
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A2_Configuring/a2_configuring_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A2_Configuring/a2_configuring_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      A3_Massing
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A3_Massing" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        A3_Massing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A3_Massing/a3_massing_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A3_Massing/a3_massing_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    <label class="md-nav__link" for="nav-6">
+      A4_Forming
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A4_Forming" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        A4_Forming
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A4_Forming/a4_forming_process/" class="md-nav__link">
+      Process
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../A4_Forming/a4_forming_product/" class="md-nav__link">
+      Product
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Final_Deliverables/finalstuff/" class="md-nav__link">
+      Final_Deliverables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    <label class="md-nav__link" for="nav-8">
+      Index
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Index" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Index
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" checked>
+    <label class="md-nav__link" for="nav-8-1">
+      Scripts
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Scripts" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        Scripts
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1_voxelization/" class="md-nav__link">
+      Voxelization highres and lowres
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.1_lattice_sun_and_shadow/" class="md-nav__link">
+      Sun and shadow analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2.2_full_lattice_sun_sky_blocking/" class="md-nav__link">
+      Sun block analysis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Skyview
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Skyview
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-initialization" class="md-nav__link">
+    0. Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-import-meshes-context-envelope" class="md-nav__link">
+    1. Import Meshes (context + envelope)
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Import Meshes (context + envelope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-load-meshes" class="md-nav__link">
+    1.1. Load Meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-visualize-meshes-with-pyvista" class="md-nav__link">
+    1.2. Visualize Meshes (with pyvista)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-import-lattice-envelope" class="md-nav__link">
+    2. Import Lattice (envelope)
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Import Lattice (envelope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-load-the-envelope-lattice" class="md-nav__link">
+    2.1. Load the Envelope Lattice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-visualize-the-context-mesh-envelope-lattice" class="md-nav__link">
+    2.2. Visualize the Context Mesh + Envelope Lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-skylight-factors" class="md-nav__link">
+    3. Skylight factors
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Skylight factors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-compute-skylight-vectors" class="md-nav__link">
+    3.1. Compute Skylight Vectors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-compute-intersection-of-sun-rays-with-context-mesh" class="md-nav__link">
+    4. Compute Intersection of Sun Rays with Context Mesh
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Compute Intersection of Sun Rays with Context Mesh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-preparing-the-list-of-ray-directions-and-origins" class="md-nav__link">
+    4.1. Preparing the List of Ray Directions and Origins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-computing-the-intersection" class="md-nav__link">
+    4.2. Computing the Intersection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-aggregate-simulation-result-in-the-sun-access-lattice" class="md-nav__link">
+    5. Aggregate Simulation Result in the Sun Access Lattice
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Aggregate Simulation Result in the Sun Access Lattice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-compute-the-percentage-of-time-that-each-voxel-sees-the-sun" class="md-nav__link">
+    5.1. Compute the percentage of time that each voxel sees the sun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-compute-the-shadow-casting" class="md-nav__link">
+    5.1. Compute the shadow casting
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Compute the shadow casting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#52-store-sun-access-information-in-a-lattice" class="md-nav__link">
+    5.2. Store sun access information in a Lattice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-store-shadow-casting-information-in-a-lattice" class="md-nav__link">
+    5.2. Store shadow casting information in a Lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-visualize-the-sun-access-lattice" class="md-nav__link">
+    5.3. Visualize the sun access lattice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualize-the-shadow-casting-lattice" class="md-nav__link">
+    Visualize the shadow casting lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.2_lattice_quietness/" class="md-nav__link">
+      Quietness
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.3_lattice_public_entrances/" class="md-nav__link">
+      Distance calculation, Public entrances
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.4_lattice_gym/" class="md-nav__link">
+      Distance calculation, Gym entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.5_lattice_parking_entrance/" class="md-nav__link">
+      Distance calculation, Parking entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.6_lattice_housing/" class="md-nav__link">
+      Distance calculation, Housing entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../3.7_lattice_comcen_entrance/" class="md-nav__link">
+      Distance calculation, Comunity Center entrance
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../4_full_lattice_minus_greenery/" class="md-nav__link">
+      Full lattice
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.1_corridors_groundfloor/" class="md-nav__link">
+      Corridors ground floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.2_corridors_upper_floors/" class="md-nav__link">
+      Corridors upper floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../5.3_shafts/" class="md-nav__link">
+      Shafts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6.1_lattice_distance_community/" class="md-nav__link">
+      Distance calculation, ground floor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../6.2_lattice_distance_upper_floors/" class="md-nav__link">
+      Distance calculation, upper floors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../7_ABM_growth/" class="md-nav__link">
+      Agent Based Model growth simulation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../8_polygonization/" class="md-nav__link">
+      Polygonization
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/figures/" class="md-nav__link">
+      Figures
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/presentations/" class="md-nav__link">
+      Presentations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../index/bibliography/" class="md-nav__link">
+      Bibliography
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+    <label class="md-nav__link" for="nav-9">
+      Documenting (TBR)
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Documenting (TBR)" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Documenting (TBR)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/instructions/" class="md-nav__link">
+      Instructions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/folder_structure/" class="md-nav__link">
+      Folder Structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../documenting/guidelines/" class="md-nav__link">
+      Guidelines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../quotes/" class="md-nav__link">
+      Quotes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../reflection/" class="md-nav__link">
+      Reflection
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-initialization" class="md-nav__link">
+    0. Initialization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-import-meshes-context-envelope" class="md-nav__link">
+    1. Import Meshes (context + envelope)
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Import Meshes (context + envelope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-load-meshes" class="md-nav__link">
+    1.1. Load Meshes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-visualize-meshes-with-pyvista" class="md-nav__link">
+    1.2. Visualize Meshes (with pyvista)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-import-lattice-envelope" class="md-nav__link">
+    2. Import Lattice (envelope)
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Import Lattice (envelope)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-load-the-envelope-lattice" class="md-nav__link">
+    2.1. Load the Envelope Lattice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-visualize-the-context-mesh-envelope-lattice" class="md-nav__link">
+    2.2. Visualize the Context Mesh + Envelope Lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-skylight-factors" class="md-nav__link">
+    3. Skylight factors
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Skylight factors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-compute-skylight-vectors" class="md-nav__link">
+    3.1. Compute Skylight Vectors
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-compute-intersection-of-sun-rays-with-context-mesh" class="md-nav__link">
+    4. Compute Intersection of Sun Rays with Context Mesh
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Compute Intersection of Sun Rays with Context Mesh">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-preparing-the-list-of-ray-directions-and-origins" class="md-nav__link">
+    4.1. Preparing the List of Ray Directions and Origins
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-computing-the-intersection" class="md-nav__link">
+    4.2. Computing the Intersection
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-aggregate-simulation-result-in-the-sun-access-lattice" class="md-nav__link">
+    5. Aggregate Simulation Result in the Sun Access Lattice
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Aggregate Simulation Result in the Sun Access Lattice">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-compute-the-percentage-of-time-that-each-voxel-sees-the-sun" class="md-nav__link">
+    5.1. Compute the percentage of time that each voxel sees the sun
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#51-compute-the-shadow-casting" class="md-nav__link">
+    5.1. Compute the shadow casting
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1. Compute the shadow casting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#52-store-sun-access-information-in-a-lattice" class="md-nav__link">
+    5.2. Store sun access information in a Lattice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-store-shadow-casting-information-in-a-lattice" class="md-nav__link">
+    5.2. Store shadow casting information in a Lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-visualize-the-sun-access-lattice" class="md-nav__link">
+    5.3. Visualize the sun access lattice
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualize-the-shadow-casting-lattice" class="md-nav__link">
+    Visualize the shadow casting lattice
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>
+(function() {
+  function addWidgetsRenderer() {
+    var mimeElement = document.querySelector('script[type="application/vnd.jupyter.widget-view+json"]');
+    var scriptElement = document.createElement('script');
+    var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
+    var widgetState;
+
+    // Fallback for older version:
+    try {
+      widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
+
+      if (widgetState && (widgetState.version_major < 2 || !widgetState.version_major)) {
+        widgetRendererSrc = 'jupyter-js-widgets@*/dist/embed.js';
+      }
+    } catch(e) {}
+
+    scriptElement.src = widgetRendererSrc;
+    document.body.appendChild(scriptElement);
+  }
+
+  document.addEventListener('DOMContentLoaded', addWidgetsRenderer);
+}());
+</script>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="skylight">Skylight</h1>
+<p>This script calculates the skylight acces and the skylight blocking on the context of an envelope.</p>
+<p>It creates a sphere around the envelope and then castst a ray from each voxel to each of the points on the sphere. This ray could be blocked by the context. 
+If the ray is not blocked by the context, it then also casts an inverse ray from the voxel towards. If this intersects the context, then the particular voxel blocks skylight from the context. </p>
+<p>As an iput this script takes a envelope_highres and envelope_lowres. As an output it gives a sky_shadowcasting_highres and sky_access highres lattice. </p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="0-initialization">0. Initialization</h2>
+<p>Importing all necessary libraries and specifying the inputs</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">topogenesis</span> <span class="k">as</span> <span class="nn">tg</span>
+<span class="kn">import</span> <span class="nn">pyvista</span> <span class="k">as</span> <span class="nn">pv</span>
+<span class="kn">import</span> <span class="nn">trimesh</span> <span class="k">as</span> <span class="nn">tm</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">ladybug.sunpath</span> <span class="kn">import</span> <span class="n">Sunpath</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">RegularGridInterpolator</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="1-import-meshes-context-envelope">1. Import Meshes (context + envelope)</h2>
+<h3 id="11-load-meshes">1.1. Load Meshes</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">envelope_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/compulsory_envelope.obj&quot;</span><span class="p">)</span>
+<span class="n">context_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s2">&quot;../data/immediate_context.obj&quot;</span><span class="p">)</span>
+
+<span class="c1"># load the mesh from file</span>
+<span class="n">envelope_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">envelope_path</span><span class="p">)</span>
+<span class="n">context_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">context_path</span><span class="p">)</span>
+
+<span class="c1"># Check if the mesh is watertight</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">envelope_mesh</span><span class="o">.</span><span class="n">is_watertight</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>True
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="12-visualize-meshes-with-pyvista">1.2. Visualize Meshes (with pyvista)</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># convert trimesh to pv_mesh</span>
+<span class="k">def</span> <span class="nf">tri_to_pv</span><span class="p">(</span><span class="n">tri_mesh</span><span class="p">):</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">faces</span><span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">pv_mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pv_mesh</span>
+
+<span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">envelope_mesh</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#abd8ff&#39;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#aaaaaa&#39;</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="cc10f423-c321-4a84-8265-868fb850d88b"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#cc10f423-c321-4a84-8265-868fb850d88b');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "12e3ab79dd344f5a81ef20d0eed79976", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(785.6075686833789, 708.1911636833788, 743.2184808333789),
+ (65.08283250000001, -12.333572500000002, 22.69374465),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2-import-lattice-envelope">2. Import Lattice (envelope)</h2>
+<h3 id="21-load-the-envelope-lattice">2.1. Load the Envelope Lattice</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># loading the lattice from csv</span>
+<span class="n">lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/voxelized_envelope_lowres.csv&#39;</span><span class="p">)</span>
+<span class="n">envelope_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">lattice_path</span><span class="p">)</span>
+
+<span class="n">full_lattice</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1"># loading the lattice from csv</span>
+<span class="n">lattice_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/voxelized_envelope_highres.csv&#39;</span><span class="p">)</span>
+<span class="n">avail_lattice_highres</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">lattice_from_csv</span><span class="p">(</span><span class="n">lattice_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="22-visualize-the-context-mesh-envelope-lattice">2.2. Visualize the Context Mesh + Envelope Lattice</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># convert mesh to pv_mesh</span>
+<span class="k">def</span> <span class="nf">tri_to_pv</span><span class="p">(</span><span class="n">tri_mesh</span><span class="p">):</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">faces</span><span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">pv_mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pv_mesh</span>
+
+<span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># fast visualization of the lattice</span>
+<span class="n">envelope_lattice</span><span class="o">.</span><span class="n">fast_vis</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="c1"># adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#aaaaaa&#39;</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="6a1cf283-865f-47f4-aacc-ca357cca4e78"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#6a1cf283-865f-47f4-aacc-ca357cca4e78');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "c6e49ee552174781a9aabfb928d3a830", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(786.2435728937402, 708.8271678937401, 740.1044850437402),
+ (65.08283250000001, -12.333572500000002, 18.94374465),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3-skylight-factors">3. Skylight factors</h2>
+<h3 id="31-compute-skylight-vectors">3.1. Compute Skylight Vectors</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#Create a sphere to put points on that represent the sky </span>
+<span class="n">sphere_mesh</span> <span class="o">=</span> <span class="n">tm</span><span class="o">.</span><span class="n">creation</span><span class="o">.</span><span class="n">icosphere</span><span class="p">(</span><span class="n">subdivisions</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">radius</span><span class="o">=</span> <span class="mf">300.0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">sphere_vectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">sphere_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="p">)</span>
+<span class="n">sky_vectors</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">sphere_vectors</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="n">sky_vectors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+
+<span class="n">sky_vectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sky_vectors</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># convert mesh to pv_mesh</span>
+<span class="k">def</span> <span class="nf">tri_to_pv</span><span class="p">(</span><span class="n">tri_mesh</span><span class="p">):</span>
+    <span class="n">faces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pad</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">faces</span><span class="p">,</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)),</span> <span class="s1">&#39;constant&#39;</span><span class="p">,</span> <span class="n">constant_values</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">pv_mesh</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">PolyData</span><span class="p">(</span><span class="n">tri_mesh</span><span class="o">.</span><span class="n">vertices</span><span class="p">,</span> <span class="n">faces</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">pv_mesh</span>
+
+
+<span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># fast visualization of the lattice</span>
+<span class="n">envelope_lattice</span><span class="o">.</span><span class="n">fast_vis</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+
+<span class="c1"># adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">sphere_mesh</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#aaaaaa&#39;</span><span class="p">)</span>
+
+<span class="c1"># add the sun locations, color orange</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_points</span><span class="p">(</span> <span class="n">sky_vectors</span> <span class="o">*</span> <span class="mi">300</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#0033ff&#39;</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="a97150a1-49a5-44ae-9fb6-a42c2c642ab2"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#a97150a1-49a5-44ae-9fb6-a42c2c642ab2');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "fc0c31636c4d4e82b46ee5f36930a194", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(298333.2075507564, 298333.2075507564, 343183.2075507564),
+ (0.0, 0.0, 44850.0),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="4-compute-intersection-of-sun-rays-with-context-mesh">4. Compute Intersection of Sun Rays with Context Mesh</h2>
+<h3 id="41-preparing-the-list-of-ray-directions-and-origins">4.1. Preparing the List of Ray Directions and Origins</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># constructing the sky direction from the sky vectors in a numpy array</span>
+<span class="n">sky_dirs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">sky_vectors</span><span class="p">)</span>
+
+<span class="c1"># exract the centroids of the envelope voxels</span>
+<span class="n">full_lattice</span> <span class="o">=</span> <span class="n">envelope_lattice</span> <span class="o">*</span> <span class="mi">0</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="n">vox_cens</span> <span class="o">=</span> <span class="n">full_lattice</span><span class="o">.</span><span class="n">centroids</span>
+
+<span class="c1"># next step we need to shoot in all of the sky directions from all of the voxels </span>
+<span class="n">ray_dir</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">ray_src</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">v_cen</span> <span class="ow">in</span> <span class="n">vox_cens</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">s_dir</span> <span class="ow">in</span> <span class="n">sky_dirs</span><span class="p">:</span>
+        <span class="c1">#if s_dir = envelope_mesh</span>
+        <span class="n">ray_src</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">v_cen</span><span class="p">)</span>
+        <span class="n">ray_dir</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s_dir</span><span class="p">)</span>
+
+<span class="c1"># converting the list of directions and sources to numpy array</span>
+<span class="n">ray_dir</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ray_dir</span><span class="p">)</span>
+<span class="n">ray_src</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ray_src</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of voxels to shoot rays from :&quot;</span><span class="p">,</span><span class="n">vox_cens</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of rays per each voxel :&quot;</span><span class="p">,</span><span class="n">sky_dirs</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of rays to be shot :&quot;</span><span class="p">,</span><span class="n">ray_src</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>number of voxels to shoot rays from : (231, 3)
+number of rays per each voxel : (305, 3)
+number of rays to be shot : (70455, 3)
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="42-computing-the-intersection">4.2. Computing the Intersection</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># computing the intersections of rays with the context from voxel to sky </span>
+<span class="n">f_tri_id</span><span class="p">,</span> <span class="n">f_ray_id</span> <span class="o">=</span> <span class="n">context_mesh</span><span class="o">.</span><span class="n">ray</span><span class="o">.</span><span class="n">intersects_id</span><span class="p">(</span><span class="n">ray_origins</span><span class="o">=</span><span class="n">ray_src</span><span class="p">,</span> <span class="n">ray_directions</span><span class="o">=</span><span class="n">ray_dir</span><span class="p">,</span> <span class="n">multiple_hits</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># computing the intersections of rays with the context backwards from voxel to context </span>
+<span class="n">b_tri_id</span><span class="p">,</span> <span class="n">b_ray_id</span> <span class="o">=</span> <span class="n">context_mesh</span><span class="o">.</span><span class="n">ray</span><span class="o">.</span><span class="n">intersects_id</span><span class="p">(</span><span class="n">ray_origins</span><span class="o">=</span><span class="n">ray_src</span><span class="p">,</span> <span class="n">ray_directions</span><span class="o">=-</span><span class="n">ray_dir</span><span class="p">,</span> <span class="n">multiple_hits</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5-aggregate-simulation-result-in-the-sun-access-lattice">5. Aggregate Simulation Result in the Sun Access Lattice</h2>
+<h3 id="51-compute-the-percentage-of-time-that-each-voxel-sees-the-sun">5.1. Compute the percentage of time that each voxel sees the sun</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initializing the hits list full of zeros</span>
+<span class="n">f_hits</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">ray_dir</span><span class="p">)</span>
+<span class="n">b_hits</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="nb">len</span><span class="p">(</span><span class="n">ray_dir</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">f_ray_id</span><span class="p">:</span>
+    <span class="n">f_hits</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">for</span> <span class="nb">id</span> <span class="ow">in</span> <span class="n">b_ray_id</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">f_hits</span><span class="p">[</span><span class="nb">id</span><span class="p">]:</span>
+        <span class="n">b_hits</span><span class="p">[</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">sky_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sky_dirs</span><span class="p">)</span>
+<span class="n">vox_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vox_cens</span><span class="p">)</span>
+<span class="c1"># initiating the list of ratio</span>
+<span class="n">vox_sky_acc</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># iterate over the voxels</span>
+<span class="k">for</span> <span class="n">v_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">vox_count</span><span class="p">):</span>
+    <span class="c1"># counter for the intersection</span>
+    <span class="n">int_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># iterate over the sun rays</span>
+    <span class="k">for</span> <span class="n">s_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sky_count</span><span class="p">):</span>
+        <span class="c1"># computing the ray id from voxel id and sun id</span>
+        <span class="n">r_id</span> <span class="o">=</span> <span class="n">s_id</span> <span class="o">+</span> <span class="n">v_id</span> <span class="o">*</span> <span class="n">sky_count</span> 
+
+        <span class="c1"># summing the intersections</span>
+        <span class="n">int_count</span> <span class="o">+=</span> <span class="n">f_hits</span><span class="p">[</span><span class="n">r_id</span><span class="p">]</span>
+
+    <span class="c1"># computing the percentage of the rays that DID NOT have </span>
+    <span class="c1"># an intersection (aka could see the sun)</span>
+    <span class="n">sky_access</span> <span class="o">=</span>   <span class="mi">1</span> <span class="o">-</span> <span class="n">int_count</span><span class="o">/</span><span class="n">sky_count</span>
+
+    <span class="c1"># add the ratio to list</span>
+    <span class="n">vox_sky_acc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sky_access</span><span class="p">)</span>
+
+<span class="c1"># hits = np.array(hits)</span>
+<span class="n">vox_sky_acc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vox_sky_acc</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="51-compute-the-shadow-casting">5.1. Compute the shadow casting</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initiating the list of ratio</span>
+<span class="n">vox_sky_shadowing</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># iterate over the voxels</span>
+<span class="k">for</span> <span class="n">v_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">vox_count</span><span class="p">):</span>
+    <span class="c1"># counter for the intersection</span>
+    <span class="n">int_count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># iterate over the sun rays</span>
+    <span class="k">for</span> <span class="n">s_id</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">sky_count</span><span class="p">):</span>
+        <span class="c1"># computing the ray id from voxel id and sun id</span>
+        <span class="n">r_id</span> <span class="o">=</span> <span class="n">s_id</span> <span class="o">+</span> <span class="n">v_id</span> <span class="o">*</span> <span class="n">sky_count</span> 
+
+        <span class="c1"># summing the intersections</span>
+        <span class="n">int_count</span> <span class="o">+=</span> <span class="n">b_hits</span><span class="p">[</span><span class="n">r_id</span><span class="p">]</span>
+
+    <span class="c1"># computing the percentage of the rays that DID NOT have an intersection</span>
+    <span class="n">shadowing</span> <span class="o">=</span> <span class="n">int_count</span>  <span class="o">/</span>  <span class="n">sky_count</span>
+    <span class="c1"># add the ratio to list</span>
+    <span class="n">vox_sky_shadowing</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">shadowing</span><span class="p">)</span>
+
+<span class="n">vox_sky_shadowing</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">vox_sky_shadowing</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="52-store-sun-access-information-in-a-lattice">5.2. Store sun access information in a Lattice</h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># getting the condition of all voxels: are they inside the envelop or not</span>
+<span class="n">env_all_vox</span> <span class="o">=</span> <span class="n">full_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># all voxels sun access</span>
+<span class="n">all_vox_sky_acc</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># v_id: voxel id in the list of only interior voxels</span>
+<span class="n">v_id</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># for all the voxels, place the interiority condition of each voxel in &quot;vox_in&quot;</span>
+<span class="k">for</span> <span class="n">vox_in</span> <span class="ow">in</span> <span class="n">env_all_vox</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">vox_in</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1"># read its value of sun access and append it to the list of all voxel sun access</span>
+        <span class="n">all_vox_sky_acc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vox_sky_acc</span><span class="p">[</span><span class="n">v_id</span><span class="p">])</span>
+        <span class="c1"># add one to the voxel id so the next time we read the next voxel</span>
+        <span class="n">v_id</span> <span class="o">+=</span> <span class="mi">1</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># add 0.0 for its sun access</span>
+        <span class="n">all_vox_sky_acc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+<span class="c1"># convert to array</span>
+<span class="n">sky_acc_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">all_vox_sky_acc</span><span class="p">)</span>
+
+<span class="c1"># reshape to lattice shape</span>
+<span class="n">sky_acc_array</span> <span class="o">=</span> <span class="n">sky_acc_array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">envelope_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># convert to lattice</span>
+<span class="n">sky_acc_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">sky_acc_array</span><span class="p">,</span> <span class="n">envelope_lattice</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>[[[0.73114754 0.90163934 0.95737705]
+  [0.76065574 0.93114754 0.9704918 ]
+  [0.74098361 0.9442623  0.98032787]
+  [0.73442623 0.95737705 0.98032787]
+  [0.72459016 0.95737705 0.98360656]
+  [0.71147541 0.97377049 0.99344262]
+  [0.65901639 0.97377049 0.99672131]]
+
+ [[0.67213115 0.87213115 0.9442623 ]
+  [0.7704918  0.9147541  0.96065574]
+  [0.79016393 0.93442623 0.97704918]
+  [0.79344262 0.95081967 0.97704918]
+  [0.77377049 0.94754098 0.98032787]
+  [0.75409836 0.96721311 0.99344262]
+  [0.47540984 0.98360656 0.99672131]]
+
+ [[0.69508197 0.85245902 0.93114754]
+  [0.7704918  0.90163934 0.95737705]
+  [0.79672131 0.93114754 0.97377049]
+  [0.80655738 0.9442623  0.97377049]
+  [0.80983607 0.9442623  0.98032787]
+  [0.77704918 0.9704918  0.99344262]
+  [0.58360656 0.97377049 0.99672131]]
+
+ [[0.71803279 0.84590164 0.92459016]
+  [0.78360656 0.89180328 0.95737705]
+  [0.81311475 0.92459016 0.96721311]
+  [0.81967213 0.93442623 0.97377049]
+  [0.82295082 0.9442623  0.97704918]
+  [0.8        0.97377049 0.99672131]
+  [0.56721311 0.97377049 0.99672131]]
+
+ [[0.71803279 0.83278689 0.91803279]
+  [0.78032787 0.8852459  0.95409836]
+  [0.80983607 0.92131148 0.96393443]
+  [0.81311475 0.93442623 0.9704918 ]
+  [0.82622951 0.93770492 0.97377049]
+  [0.82295082 0.96721311 0.99672131]
+  [0.71803279 0.9704918  1.        ]]
+
+ [[0.72786885 0.83278689 0.92131148]
+  [0.78360656 0.87868852 0.95081967]
+  [0.81967213 0.92131148 0.96721311]
+  [0.8295082  0.92786885 0.96721311]
+  [0.83606557 0.94098361 0.97377049]
+  [0.83278689 0.96393443 0.99672131]
+  [0.61639344 0.96721311 1.        ]]
+
+ [[0.73114754 0.83934426 0.92131148]
+  [0.8        0.8852459  0.95737705]
+  [0.81639344 0.91803279 0.96721311]
+  [0.8295082  0.92786885 0.96721311]
+  [0.83934426 0.93770492 0.9704918 ]
+  [0.83278689 0.96721311 1.        ]
+  [0.78032787 0.96721311 1.        ]]
+
+ [[0.73770492 0.83606557 0.91803279]
+  [0.80327869 0.88196721 0.95737705]
+  [0.8295082  0.9147541  0.96393443]
+  [0.83278689 0.92786885 0.96721311]
+  [0.84262295 0.94098361 0.97704918]
+  [0.84590164 0.96393443 0.99672131]
+  [0.81967213 0.96065574 0.99672131]]
+
+ [[0.73770492 0.84262295 0.92459016]
+  [0.79672131 0.8852459  0.96065574]
+  [0.80327869 0.90819672 0.96393443]
+  [0.81967213 0.92786885 0.9704918 ]
+  [0.8295082  0.93770492 0.98032787]
+  [0.82295082 0.95081967 0.99672131]
+  [0.82295082 0.96065574 0.99672131]]
+
+ [[0.73442623 0.85245902 0.93114754]
+  [0.78360656 0.88196721 0.95737705]
+  [0.79344262 0.91147541 0.9704918 ]
+  [0.79672131 0.92131148 0.97377049]
+  [0.80655738 0.93114754 0.98032787]
+  [0.81639344 0.94754098 0.99672131]
+  [0.81639344 0.95409836 0.99672131]]
+
+ [[0.71147541 0.8557377  0.93770492]
+  [0.73114754 0.88196721 0.96065574]
+  [0.73770492 0.90163934 0.9704918 ]
+  [0.75081967 0.91147541 0.97377049]
+  [0.77377049 0.92786885 0.98360656]
+  [0.78032787 0.9442623  0.99344262]
+  [0.77377049 0.95409836 0.99672131]]]
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="52-store-shadow-casting-information-in-a-lattice">5.2. Store shadow casting information in a Lattice</h5>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># getting the condition of all voxels: are they inside the envelop or not</span>
+<span class="n">env_all_vox</span> <span class="o">=</span> <span class="n">full_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+<span class="c1"># all voxels sun access</span>
+<span class="n">all_vox_sky_shad_cast</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># v_id: voxel id in the list of only interior voxels</span>
+<span class="n">v_id</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># for all the voxels, place the interiority condition of each voxel in &quot;vox_in&quot;</span>
+<span class="k">for</span> <span class="n">vox_in</span> <span class="ow">in</span> <span class="n">env_all_vox</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">vox_in</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="c1"># read its value of sun access and append it to the list of all voxel sun access</span>
+        <span class="n">all_vox_sky_shad_cast</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vox_sky_shadowing</span><span class="p">[</span><span class="n">v_id</span><span class="p">])</span>
+        <span class="c1"># add one to the voxel id so the next time we read the next voxel</span>
+        <span class="n">v_id</span> <span class="o">+=</span> <span class="mi">1</span> 
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># add 0.0 for its sun access</span>
+        <span class="n">all_vox_sky_shad_cast</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+
+
+<span class="c1"># convert to array</span>
+<span class="n">sky_shadcast_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">all_vox_sky_shad_cast</span><span class="p">)</span>
+
+<span class="c1"># reshape to lattice shape</span>
+<span class="n">sky_shadcast_array</span> <span class="o">=</span> <span class="n">sky_shadcast_array</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">envelope_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># convert to lattice</span>
+<span class="n">sky_shadcast_lattice</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">sky_shadcast_array</span><span class="p">,</span> <span class="n">envelope_lattice</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+<code>(11, 7, 3)
+</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="53-visualize-the-sun-access-lattice">5.3. Visualize the sun access lattice</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">vis_lattice</span> <span class="o">=</span> <span class="n">sky_acc_lattice</span>
+<span class="c1"># Create the spatial reference</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+
+<span class="c1"># Set the grid dimensions: shape because we want to inject our values</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">shape</span>
+<span class="c1"># The bottom left corner of the data set</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">minbound</span>
+<span class="c1"># These are the cell sizes along each axis</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">unit</span>
+
+<span class="c1"># Add the data values to the cell data</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s2">&quot;Sky Access&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>  <span class="c1"># Flatten the Lattice</span>
+
+<span class="c1"># adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+
+<span class="c1"># adding the volume</span>
+<span class="n">opacity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">])</span><span class="o">*</span><span class="mf">1.5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span><span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">shade</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="5f840355-34bd-43dd-adc8-48ba97ae300b"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#5f840355-34bd-43dd-adc8-48ba97ae300b');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "1573387c5e5e4259bc369aa11982fff3", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(785.6075686833789, 708.1911636833788, 743.2184808333789),
+ (65.08283250000001, -12.333572500000002, 22.69374465),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="visualize-the-shadow-casting-lattice">Visualize the shadow casting lattice</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">vis_lattice</span> <span class="o">=</span> <span class="n">sky_shadcast_lattice</span>
+<span class="c1"># Create the spatial reference</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+
+<span class="c1"># Set the grid dimensions: shape because we want to inject our values</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">shape</span>
+<span class="c1"># The bottom left corner of the data set</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">minbound</span>
+<span class="c1"># These are the cell sizes along each axis</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">unit</span>
+
+<span class="c1"># Add the data values to the cell data</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s2">&quot;Skylight Blocking&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>  <span class="c1"># Flatten the Lattice</span>
+
+<span class="c1"># adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+
+<span class="c1"># adding the volume</span>
+<span class="n">opacity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">])</span><span class="o">*</span><span class="mf">1.5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span><span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">shade</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="7d830c67-aece-4e52-a86d-40f3e01b179b"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#7d830c67-aece-4e52-a86d-40f3e01b179b');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "834235b201164a99b3c2c4c7d11c879c", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(785.6075686833789, 708.1911636833788, 743.2184808333789),
+ (65.08283250000001, -12.333572500000002, 22.69374465),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="54-interpolation">5.4 interpolation</h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="interpolation-sky-factor">interpolation sky factor</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">interpolate</span><span class="p">(</span><span class="n">info_lowres</span><span class="p">,</span> <span class="n">base_highres</span><span class="p">):</span>
+    <span class="c1"># line spaces</span>
+    <span class="n">x_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">y_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">z_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="c1"># interpolation function</span>
+    <span class="n">interpolating_function</span> <span class="o">=</span> <span class="n">RegularGridInterpolator</span><span class="p">((</span><span class="n">x_space</span><span class="p">,</span> <span class="n">y_space</span><span class="p">,</span> <span class="n">z_space</span><span class="p">),</span> <span class="n">info_lowres</span><span class="p">,</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># high_res lattice</span>
+    <span class="n">envelope_lattice</span> <span class="o">=</span> <span class="n">base_highres</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># sample points</span>
+    <span class="n">sample_points</span> <span class="o">=</span> <span class="n">envelope_lattice</span><span class="o">.</span><span class="n">centroids</span>
+
+    <span class="c1"># interpolation</span>
+    <span class="n">interpolated_values</span> <span class="o">=</span> <span class="n">interpolating_function</span><span class="p">(</span><span class="n">sample_points</span><span class="p">)</span>
+
+    <span class="c1"># lattice construction</span>
+    <span class="n">info_highres</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">interpolated_values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">base_highres</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="n">base_highres</span><span class="p">)</span>
+
+    <span class="c1"># nulling the unavailable cells</span>
+    <span class="n">info_highres</span> <span class="o">*=</span> <span class="n">base_highres</span>
+
+    <span class="k">return</span> <span class="n">info_highres</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#interpolate the lattice over highres</span>
+<span class="n">sky_acc_highres</span> <span class="o">=</span> <span class="n">interpolate</span><span class="p">(</span><span class="n">sky_acc_lattice</span><span class="p">,</span> <span class="n">avail_lattice_highres</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="interpolation-sky-blocking-factor">interpolation sky blocking factor</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">interpolate</span><span class="p">(</span><span class="n">info_lowres</span><span class="p">,</span> <span class="n">base_highres</span><span class="p">):</span>
+    <span class="c1"># line spaces</span>
+    <span class="n">x_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">y_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">z_space</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">minbound</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">info_lowres</span><span class="o">.</span><span class="n">maxbound</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span><span class="n">info_lowres</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+    <span class="c1"># interpolation function</span>
+    <span class="n">interpolating_function</span> <span class="o">=</span> <span class="n">RegularGridInterpolator</span><span class="p">((</span><span class="n">x_space</span><span class="p">,</span> <span class="n">y_space</span><span class="p">,</span> <span class="n">z_space</span><span class="p">),</span> <span class="n">info_lowres</span><span class="p">,</span> <span class="n">bounds_error</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># high_res lattice</span>
+    <span class="n">envelope_lattice</span> <span class="o">=</span> <span class="n">base_highres</span> <span class="o">+</span> <span class="mi">1</span>
+
+    <span class="c1"># sample points</span>
+    <span class="n">sample_points</span> <span class="o">=</span> <span class="n">envelope_lattice</span><span class="o">.</span><span class="n">centroids</span>
+
+    <span class="c1"># interpolation</span>
+    <span class="n">interpolated_values</span> <span class="o">=</span> <span class="n">interpolating_function</span><span class="p">(</span><span class="n">sample_points</span><span class="p">)</span>
+
+    <span class="c1"># lattice construction</span>
+    <span class="n">info_highres</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">to_lattice</span><span class="p">(</span><span class="n">interpolated_values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">base_highres</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="n">base_highres</span><span class="p">)</span>
+
+    <span class="c1"># nulling the unavailable cells</span>
+    <span class="n">info_highres</span> <span class="o">*=</span> <span class="n">base_highres</span>
+
+    <span class="k">return</span> <span class="n">info_highres</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#interpolate the lattice over highres</span>
+<span class="n">sky_shadcast_highres</span> <span class="o">=</span> <span class="n">interpolate</span><span class="p">(</span><span class="n">sky_shadcast_lattice</span><span class="p">,</span> <span class="n">avail_lattice_highres</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="55-visualize-interpolation">5.5 visualize interpolation</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="sky-access-interpolation">Sky access interpolation</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">vis_lattice</span> <span class="o">=</span> <span class="n">sky_acc_highres</span>
+<span class="c1"># Create the spatial reference</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+
+<span class="c1"># Set the grid dimensions: shape because we want to inject our values</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">shape</span>
+<span class="c1"># The bottom left corner of the data set</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">minbound</span>
+<span class="c1"># These are the cell sizes along each axis</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">unit</span>
+
+<span class="c1"># Add the data values to the cell data</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s2">&quot;Sky access Highres&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>  <span class="c1"># Flatten the Lattice</span>
+
+<span class="c1"># adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+
+<span class="c1"># adding the volume</span>
+<span class="n">opacity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">])</span><span class="o">*</span><span class="mf">1.5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span><span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">shade</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="707e41e6-89e0-42ec-9ec1-a90a061c9cab"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#707e41e6-89e0-42ec-9ec1-a90a061c9cab');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "f3b021bc0eaa44df85af2b36b665a918", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(785.6075686833789, 708.1911636833788, 743.2184808333789),
+ (65.08283250000001, -12.333572500000002, 22.69374465),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="sky-view-blocking-interpolation">sky view blocking interpolation</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1"># initiating the plotter</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">Plotter</span><span class="p">(</span><span class="n">notebook</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">vis_lattice</span> <span class="o">=</span> <span class="n">sky_shadcast_highres</span>
+<span class="c1"># Create the spatial reference</span>
+<span class="n">grid</span> <span class="o">=</span> <span class="n">pv</span><span class="o">.</span><span class="n">UniformGrid</span><span class="p">()</span>
+
+<span class="c1"># Set the grid dimensions: shape because we want to inject our values</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">dimensions</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">shape</span>
+<span class="c1"># The bottom left corner of the data set</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">origin</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">minbound</span>
+<span class="c1"># These are the cell sizes along each axis</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">spacing</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">unit</span>
+
+<span class="c1"># Add the data values to the cell data</span>
+<span class="n">grid</span><span class="o">.</span><span class="n">point_arrays</span><span class="p">[</span><span class="s2">&quot;SkyBlocking highres&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">vis_lattice</span><span class="o">.</span><span class="n">flatten</span><span class="p">(</span><span class="n">order</span><span class="o">=</span><span class="s2">&quot;F&quot;</span><span class="p">)</span>  <span class="c1"># Flatten the Lattice</span>
+
+<span class="c1"># adding the meshes</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_mesh</span><span class="p">(</span><span class="n">tri_to_pv</span><span class="p">(</span><span class="n">context_mesh</span><span class="p">),</span> <span class="n">opacity</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s1">&#39;wireframe&#39;</span><span class="p">)</span>
+
+<span class="c1"># adding the volume</span>
+<span class="n">opacity</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">,</span><span class="mf">0.6</span><span class="p">])</span><span class="o">*</span><span class="mf">1.5</span>
+<span class="n">p</span><span class="o">.</span><span class="n">add_volume</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">,</span> <span class="n">clim</span><span class="o">=</span><span class="p">[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">],</span><span class="n">opacity</span><span class="o">=</span><span class="n">opacity</span><span class="p">,</span> <span class="n">shade</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># plotting</span>
+<span class="n">p</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">use_ipyvtk</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div id="463b503d-3222-407c-a6df-5ca601c3eeb1"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#463b503d-3222-407c-a6df-5ca601c3eeb1');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "5258a8e3902947d1b5606e1296f14016", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+</div>
+<div class="output_area">
+<div class="output_text output_subarea output_execute_result">
+<pre>
+<code>[(785.6075686833789, 708.1911636833788, 743.2184808333789),
+ (65.08283250000001, -12.333572500000002, 22.69374465),
+ (0.0, 0.0, 1.0)]</code>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="6-save-sun-access-lattice-into-a-csv">6. Save Sun Access Lattice into a CSV</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#save the sky access latice to csv</span>
+<span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/sky_access_highres.csv&#39;</span><span class="p">)</span>
+<span class="n">sky_acc_highres</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="c1">#save the skyblocking latice to csv</span>
+<span class="n">csv_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="s1">&#39;../data/sky_shadowcasting_highres.csv&#39;</span><span class="p">)</span>
+<span class="n">sky_shadcast_highres</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">csv_path</span><span class="p">)</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="credits">Credits</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">__author__</span> <span class="o">=</span> <span class="s2">&quot;Shervin Azadi and Pirouz Nourian&quot;</span>
+<span class="n">__editor__</span> <span class="o">=</span> <span class="s2">&quot;Siebren Meines&quot;</span>
+<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;1.0&quot;</span>
+<span class="n">__url__</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/shervinazadi/spatial_computing_workshops&quot;</span>
+<span class="n">__summary__</span> <span class="o">=</span> <span class="s2">&quot;Skylight and skylight blocking calculation&quot;</span>
+</code></pre></div>
+
+
+
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../2.2_full_lattice_sun_sky_blocking/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Sun block analysis
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../3.2_lattice_quietness/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Quietness
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/EdaAkaltun/spatial_computing_project_template" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b3a72adc.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['search.suggest', 'search.share', 'header.autohide'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
