@@ -1046,6 +1046,7 @@ For altering the building, the desired geometry should be added onto the “perf
 This is the theory behind the script. Unfortunately, in practice, there are some challenges to work around. Firstly the “new geometry” should be somewhat cube like. This means that although the added geometry can be asymmetrical, adding/extruding the geometry on an edge can only be done in a symmetrical way, otherwise the box will be cut up into more than 152 pieces. 
 The way the 152 pieces are sorted is done by a distance from the piece towards a point. By altering the geometry, these distances do not always stay completely the same though. In 5 “new geometries” tests, in 2 to 5 pieces out of 152 pieces, the order had changed.  This can be solved by manually changing the slider to the correct position. In the 5 test runs the change of the slider was a maximum of 5 up or down.</p>
 <h2 id="pseudocode-perfect-shape-grasshopper-script"><strong>Pseudocode Perfect shape grasshopper script</strong></h2>
+<p><em>you can zoom in on the flowchart with the bar below that appears when hovering over the diagram</em></p>
 <iframe frameborder="0" style="width:100%;height:193px;" src="https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1&title=Grasshopperscript.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1CGnwSmRQPMmgTsY0JmWY-r1alWDR8-cj%26export%3Ddownload"></iframe>
 
 <h2 id="symmetry-152-pieces">symmetry = 152 pieces</h2>

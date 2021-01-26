@@ -62,6 +62,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#agent-based-model" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -428,10 +433,75 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        ABM Growth
+        <span class="md-nav__icon md-icon"></span>
+      </label>
     
     <a href="./" class="md-nav__link md-nav__link--active">
       ABM Growth
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kpis-to-agent-criteria" class="md-nav__link">
+    KPI's to agent criteria
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-spaces-to-workable-values" class="md-nav__link">
+    Configuring spaces to workable values
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring spaces to workable values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#space-heights-to-stencils" class="md-nav__link">
+    Space heights to stencils
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#space-areas-to-voxel-amounts" class="md-nav__link">
+    Space areas to voxel amounts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitive-program-table-result-input-for-generative-relations-simulation" class="md-nav__link">
+    Definitive program table result (input for generative relations simulation)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -913,15 +983,259 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kpis-to-agent-criteria" class="md-nav__link">
+    KPI's to agent criteria
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-spaces-to-workable-values" class="md-nav__link">
+    Configuring spaces to workable values
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring spaces to workable values">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#space-heights-to-stencils" class="md-nav__link">
+    Space heights to stencils
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#space-areas-to-voxel-amounts" class="md-nav__link">
+    Space areas to voxel amounts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#definitive-program-table-result-input-for-generative-relations-simulation" class="md-nav__link">
+    Definitive program table result (input for generative relations simulation)
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>ABM Growth</h1>
-                
-                <p>x</p>
+                <h1 id="agent-based-model">Agent Based Model</h1>
+<h2 id="kpis-to-agent-criteria"><strong>KPI's to agent criteria</strong></h2>
+<p>The following criteria have been implemented in the agent based simulation:</p>
+<ul>
+<li>Matrix based relations between spaces (Collectivity)</li>
+<li>Sun access (Home quality) + (Sustainability)</li>
+<li>Entrance distance for public, housing, gym, parking and communal spaces (Diversity in audience) </li>
+<li>The heights of the spaces (Home quality)</li>
+<li>The desired area requirements per space (Program of requirements)</li>
+<li>Skyview (Home quality)</li>
+<li>Greenery (Sustainability)</li>
+<li>Noise (Home quality) + (Collectivity) + (Sustainability)</li>
+</ul>
+<hr />
+<h2 id="configuring-spaces-to-workable-values"><strong>Configuring spaces to workable values</strong></h2>
+<p>In order to implement the design criteria as mentioned before, those had to be converted to workable values. The values have been written for each space versus the criteria varying from 0 to 1. 0 indicates no connection, 1 indicates a strong connection (Referencing back to the matrix from A1_Configuring). This has been applied for the following criteria: matrix based relations between spaces, sun access, entrance distance for public, housing, gym, parking and communal spaces, skyview, greenery and noise. </p>
+<p>For the space heights and space areas a different approach had to be made since those are hardcoded criteria coming from the Program of Requirements. Hence, those explained in the next paragraph. </p>
+<p><center><iframe src="https://thumbs.gfycat.com/LittleAdmiredBufeo-size_restricted.gif" style="width:150%; height:295px;" frameborder="0"></iframe> </p>
+<p><em>Midterm ABM growth simulation</em>
+</center></p>
+<h3 id="space-heights-to-stencils"><strong>Space heights to stencils </strong></h3>
+<p>In order to implement the height differences of spaces given from the Porgram of Requirements into the Apidae method, the initial given stencil for all agents (see left stencil in the picture below) has been expanded in the z axis. In the code, this has been done for 1, 2, 3, 4 and 5 voxels high. The highest stencil is 5 x 1.8m = 9 meters into the z axis and 1.8m on the x and y axis. The picture below shows, in the order of mention, the neighbors for a stencil that is 1.8m high, 3.6m high and 5.4m high.</p>
+<p><center><img src="https://cdn.discordapp.com/attachments/784009094474366977/803249271100014612/unknown.png"></p>
+<p><em>height stencils</em>
+</center></p>
+<p>The creation of the new stencils can be created with the following piece of code:
+In this piece of code new neighbours have been defined for the stencils that need to be higher than 1.8m. For example, s_2 has it's z axis neighbor now set at 2 high. Beware that later in the growth model, the occupation has to be adjusted accordingly.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># creating neighborhood definition for stencil that is 1.8m high</span>
+<span class="n">s_1</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">create_stencil</span><span class="p">(</span><span class="s2">&quot;von_neumann&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># setting the center to zero</span>
+<span class="n">s_1</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#####################################################################</span>
+<span class="c1"># skipping s_2, s_3, s_4 for this example because it&#39;s the same way</span>
+<span class="c1">#####################################################################</span>
+
+<span class="c1"># creating neighborhood definition for stencil that is 9m high</span>
+<span class="n">s_5</span> <span class="o">=</span> <span class="n">tg</span><span class="o">.</span><span class="n">create_stencil</span><span class="p">(</span><span class="s2">&quot;von_neumann&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="c1"># setting the center to zero</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># setting the center to zero</span>
+<span class="n">s_5</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># listing the stencils in order to make them correspond later with the spaces and their height requirement</span>
+<span class="n">stencils</span> <span class="o">=</span> <span class="p">[</span><span class="n">s_1</span><span class="p">,</span> <span class="n">s_2</span><span class="p">,</span> <span class="n">s_3</span><span class="p">,</span> <span class="n">s_4</span><span class="p">,</span> <span class="n">s_5</span><span class="p">]</span>
+</code></pre></div>
+
+<h3 id="space-areas-to-voxel-amounts"><strong>Space areas to voxel amounts</strong></h3>
+<p>Based on the program of requirements, the required space sizes have been coverted to amount of necessary voxels to meet the area requirement and therefore fulfil it. This has been implemented in the script to maintain the desirded area per spaces, and has been used to limit the growth of the agents. 
+From the Program of Requirements the room areas can be obtained, and by giving every space a stencil id according to the desired free height (as explained before how the desired height can be implemented) the total amount of voxel necessary for the space to grow towards can be determined. This can be done with the following piece of code:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># max voxel count per space (here we do the stencil type + 1 </span>
+<span class="c1">#times the amount of area needed in order to obtain the total amount of voxels that need to be occupied by the script)</span>
+<span class="c1"># pick room area data</span>
+<span class="n">a_room_vox</span> <span class="o">=</span> <span class="n">agn_prefs</span><span class="p">[</span><span class="s2">&quot;room_area&quot;</span><span class="p">]</span>
+<span class="c1"># pick stencil id&#39;s and do +1 because we start with 0 instead of 1 (id 2 would have stencil 3 high otherwise)</span>
+<span class="n">a_room_stencil</span> <span class="o">=</span> <span class="n">agn_prefs</span><span class="p">[</span><span class="s2">&quot;stencil_id&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="c1"># obtain the max amount of voxels needing to be occupied by doing the room area times the height of the space (stencil)</span>
+<span class="n">a_room_voxels</span> <span class="o">=</span> <span class="n">a_room_stencil</span> <span class="o">*</span> <span class="n">a_room_vox</span>
+<span class="c1"># print in order to check below if you obtain correct values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_room_voxels</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Which gives the following table that can be used later in the growth model:</p>
+<p><center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803255219545964564/unknown.png"></center></p>
+<hr />
+<h2 id="definitive-program-table-result-input-for-generative-relations-simulation"><strong>Definitive program table result (input for generative relations simulation)</strong></h2>
+<p>The following table has been made based on the agent/space criterias, this has been used in the definitive script for generating the agent based design. </p>
+<p>4 kinds of values are included next to [white] the agent/space names and space id's:</p>
+<ol>
+<li>[blue] Desire to closeness to given entrance (0 to 1)</li>
+<li>[yellow] Desire for high values of the given analysis (0 to 1)</li>
+<li>[green] Necessary data from the program of requirements (imput specific values)</li>
+<li>[grey] Desire to be close to given agent/space (0 to 1)</li>
+</ol>
+<p>The given entrances for blue and given analysis for yellow are loaded in as csv files. For the making of those csv files, address their corresponding script.</p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR3BSCNWlacKeNAtlluEjTCw5SMh3Tet-m3ixMxbSwR_aIhWDu0YJLZGvVQdgqWNg/pubhtml?gid=1634426511&amp;single=true&amp;widget=true&amp;headers=false"style="width:150%; height:600px;"></iframe>
+
+<h1 id="the-generative-relations-simulation"><strong>The Generative Relations Simulation</strong></h1>
+<p>After obtaining all the input necessary for the growth model (distance caltulations, solar simulations etc.) it is imporant to be able to make decisions based on that. For this, the script for the Multiple-criteria decision analysis for agents was used and further developed to our needs.  </p>
+<p>With the method explained before, the stencils and area calculations were made. The final ABM (Agent Based Model) growth script can be found here 
+(INSERT LINKKKKKKKKKKKKKKKKKKK)!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+<h2 id="how-it-works"><strong>How it works</strong></h2>
+<p><center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803280396954370088/unknown.png"></center>
+The ABM (Agent Based Model) growth script runs over a given timeframe. This timeframe is set for it to grow a voxel/stencil per frame. Due to the implementation of stencils with different z axis, the script becomes more efficient (since it covers more voxels per frame). </p>
+<p>After intiializing the script over a given timeframe, it evaluates for every agent the voxels and stores the values of the free voxels in a list. This list is later used for the evaluation of the voxels. 
+After having made this list, another for loop is initialized. This is the main agent loop, where all free neighbours are retrieved that are accessible. In the meantime the agents are assessed regarding their maximum given z coordinate value and the max area they're allowed to occupy. 
+After all the free neighbours are known, for every agent, if there is a free neighbour is found; it checks the preferences of the agent and evaluates this with the fuzzy framework. When this is done, there are 2 options for the method of occupation: </p>
+<ol>
+<li>The max area limit has not been reached yet so it picks the highest value neighbouring voxel. </li>
+<li>Else, it checks if there are better voxels to be occupied (if the given evaluation limit is higher than the agent satisfaction; it departs that bad voxel and occupies the new one.</li>
+</ol>
+<p>After this is done for all time frames, the new lattice is constructed with the occupation lattice. This is done with stencils that are assigned per agent (for example the housing will use the stencil with an height of 3.6m, this would also occupy 2 (2x1.8)voxels for the agent per frame instead of 1 with the initial stencil). </p>
+<p>For this particular case the code has been ran through 2500 frames.</p>
+<h3 id="occupying-with-different-stencils"><strong>Occupying with different stencils</strong></h3>
+<p>For making sure the agents with different kinds of stencils corresponding to their height preferences occupy the necessary amount of voxel in the z axis, a variable has been made and used in the occupation function. </p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># making a variable that gives the height of the stencils in voxel (coincidentally +1 since all stencils grow with 1 voxel per id)</span>
+<span class="n">a_height</span> <span class="o">=</span> <span class="n">a_stencil_id</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="c1">#checking if there is enough space for it to see it as available</span>
+<span class="c1"># Function for checking the availability (Since it is repeated several times in the main loop)</span>
+<span class="k">def</span> <span class="nf">check_avail</span><span class="p">(</span><span class="n">avail_lattice</span><span class="p">,</span> <span class="n">ind</span><span class="p">,</span> <span class="n">a_stencil_id</span><span class="p">):</span>
+    <span class="n">condition</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">ind_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ind</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a_stencil_id</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">new_ind_array</span> <span class="o">=</span> <span class="n">ind_array</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">step</span><span class="p">])</span>
+        <span class="n">condition</span> <span class="o">*=</span> <span class="n">avail_lattice</span><span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">new_ind_array</span><span class="p">)]</span>
+    <span class="k">return</span> <span class="n">condition</span>
+
+<span class="c1"># if its available: </span>
+<span class="c1"># Function for the occupation (and departure but for this piece of demonstration that part isn&#39;t important)</span>
+<span class="k">def</span> <span class="nf">mult_occupation</span><span class="p">(</span><span class="n">selected_neigh_3d_address</span><span class="p">,</span> <span class="n">a_id</span><span class="p">,</span> <span class="n">a_height</span><span class="p">,</span> <span class="n">agn_locs</span><span class="p">,</span> <span class="n">agn_src_locs</span><span class="p">,</span> <span class="n">occ_lattice</span><span class="p">,</span> <span class="n">avail_lattice</span><span class="p">,</span> <span class="n">departure</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="c1"># Doing this for x times in the z axis with x coming from a_height</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">a_height</span><span class="p">):</span>
+
+        <span class="c1">#giving a step to the regular occupation in order to run this for every step in the z aces</span>
+        <span class="n">new_address</span> <span class="o">=</span> <span class="n">selected_neigh_3d_address</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">step</span><span class="p">])</span>
+        <span class="c1"># check if there&#39;s enough space in the z axis</span>
+        <span class="k">if</span> <span class="n">new_address</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">occ_lattice</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]:</span>
+            <span class="c1"># make tuple of the address</span>
+            <span class="n">selected_neigh_3d_id</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">new_address</span><span class="p">)</span>
+            <span class="c1"># find the location of the newly selected neighbour</span>
+            <span class="n">selected_neigh_loc</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">selected_neigh_3d_id</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">departure</span><span class="o">==</span><span class="kc">False</span><span class="p">:</span>
+                <span class="c1"># add the newly selected neighbour location to agent locations</span>
+                <span class="n">agn_locs</span><span class="p">[</span><span class="n">a_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">selected_neigh_loc</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">step</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">agn_src_locs</span><span class="p">[</span><span class="n">a_id</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">selected_neigh_loc</span><span class="p">)</span>
+                <span class="c1"># set the newly selected neighbour as UNavailable (0) in the availability lattice</span>
+                <span class="n">avail_lattice</span><span class="p">[</span><span class="n">selected_neigh_3d_id</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="c1"># set the newly selected neighbour as OCCUPIED by current agent </span>
+                <span class="c1"># (-1 means not-occupied so a_id)</span>
+                <span class="n">occ_lattice</span><span class="p">[</span><span class="n">selected_neigh_3d_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">a_id</span>
+</code></pre></div>
+
+<h2 id="housing-plan-modularity-with-stencils">Housing plan modularity with stencils</h2>
+<p>A highly modular building needs to be adaptable and reusable for different functions over time. The standardised voxels are very suitable for generating this, but more importantly, they give freedom to generate many different housing plans. For the agent based model, an extra layer of information could be added by growing stencil-based for all housing, co-working spaces and start-up offices. 
+Different housing tiles are generated, that together carry all needed functions. For each housing type, a tile library should be made to generate rooms and spaces that fulfil all requirements. These tiles each have markings along the sides, where closed walls, windows, openings to public functions or openings to indoor functions are determined. This way, each house will form based on the markings and their personal library. By generating the housing units like this, all houses will automatically be correctly connected to a corridor, the depth of the building will be limited to the depth of a house and each house will have sufficient daylight and have all their functions available. An extra layer to this would then be the implementation of placement of open and closed facades for each house, coherent with the sun orientation of the building, but also the view. For this the demand of sky visibility and sunlight availability could be calculated for each potential window, which would then also limit the occurrence of two houses growing opposite of each other with minimal free space between them. </p>
+<p><center><img src="https://cdn.discordapp.com/attachments/784009094474366977/803382410254614538/met_stencils_Pagina_1.jpg"></p>
+<p><em>function stencil concepts: student housing and corridor</em>
+<img src="https://cdn.discordapp.com/attachments/784009094474366977/803382435085287454/met_stencils_Pagina_2.jpg"></p>
+<p><em>conceptual configuration of the growth of housing units</em>
+</center></p>
+<p>The concept of these stencil-based growth is visualised in the picture above. The timeframe of this course limited the elaboration on this complex growth model, but thoughts have been put into it. </p>
+<p><center><img src="https://cdn.discordapp.com/attachments/784009094474366977/803384607834898432/plattegrondenTekengebied_4.png">
+<img src="https://cdn.discordapp.com/attachments/784009094474366977/803384610809184296/plattegrondenTekengebied_7.png">
+<img src="https://cdn.discordapp.com/attachments/784009094474366977/803384611396780062/plattegrondenTekengebied_10.png"></p>
+<p><em>simplified housing plan stencils</em>
+ </center></p>
+<p>Instead, simpler housing plans are generated. Still based on the voxel-sized plan, but with a standardisation for each housing unit, where there are just a few fixed stencils for each building. This is also not implemented in the growth model due to time limitations. </p>
+<h3 id="evaluation"><strong>Evaluation</strong></h3>
+<p>The current evaluation part of the code measures if an agent is satisfied with the given evaluation value through the program table. If the agent is not satisfied, it allows the agent to grow towards better voxels, where less valuable voxels are swapped for better ones. If the agent is satisfied, it stays the same and stops growing once it reaches it's max area value. </p>
+<p>The agent satisfaction has been tracked over the final result (2500 frames). With this data Panda tables have been made and visualized through graphs. This way, the agent satisfaction can be tracked without constantly having to look at the visualization and voxel growth manually. See graphs below for the results. The agent names correspond to their agent id in the program.</p>
+<p>Evaluation over time for public spaces and entrances:
+<center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322582107029554/AySsljdNmbF9AAAAAElFTkSuQmCC.png"></center></p>
+<p>Evaluation over time for Assisted living (11), Student housing (17) and Start-up office (19)
+<center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322582107029554/AySsljdNmbF9AAAAAElFTkSuQmCC.png"></center></p>
+<p>Evaluation over time for starter housing (16):
+<center> <img src="https://cdn.discordapp.com/attachments/784009094474366977/803322623199150130/B02eVgwU5jOiAAAAAElFTkSuQmCC.png"></center></p>
+<h3 id="final-growth"><strong>Final growth</strong></h3>
+<iframe src="https://media3.giphy.com/media/WDhRzS8AIleGliAs9s/giphy.gif" style="width:150%; height:300px;" frameborder="0"></iframe>
+
+<h3 id="improvement-points"><strong>Improvement points</strong></h3>
+<ul>
+<li>Distance calculation and evaluation between spaces: 
+We werent able to implement distance calculations between spaces, so spaces do not pull on each other, in fact they are next to each other only because they have the same preferences. </li>
+<li>Further development of the evaluation
+The current evaluation does not take into account whether a specific voxel would've been more valuable for another kind of agent, so it does not assess already occupied voxels by agents other than itself. It only assesses itself. This could be one of the further improvements on the evaluation.</li>
+<li>Less timeframes (calculations behind)
+It is better to find a way to do the frames code wise more efficiently since the current one has to be run the amount of voxels the biggest agent is. Which is kind of inefficient since maybe all others are already done halfway. </li>
+<li>Squareness (conditional neighbour or different stencil) 
+We weren’t able to implement squareness yet due to the time limit. This could have 2 ways: we could set conditions to the neighbours in order to do so or we could make bigger stencils in the x and y axes as cubes but that actually complicates things regarding neighbouring and occupying.</li>
+<li>Stencil assigning per floor 
+Also we havent yet been able to implement specific stencils only for specific z coordinates, So the public spaces are now 5 z coordinate high stencils instead of one fo 3 that only grows 2 high stencils above itself.</li>
+<li>Shafts and corridors implementation
+It is important to combine shafts and corridors, but when we combined those 2, it made the agents get stuck between corridors and not grow further (this happened because we dont want public spaces to grow above  a certain height). </li>
+</ul>
                 
               
               

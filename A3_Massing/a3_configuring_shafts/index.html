@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shafts-and-corridors" class="md-skip">
+        <a href="#shaft-and-corridor-placement" class="md-skip">
           Skip to content
         </a>
       
@@ -421,6 +421,8 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Shafts and Corridors
@@ -435,6 +437,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -443,29 +447,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shafts-and-corridors" class="md-nav__link">
-    Shafts and Corridors
-  </a>
-  
-    <nav class="md-nav" aria-label="Shafts and Corridors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#corridor-evaluation" class="md-nav__link">
     Corridor evaluation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#improvements" class="md-nav__link">
     Improvements
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -972,6 +963,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -980,29 +973,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shafts-and-corridors" class="md-nav__link">
-    Shafts and Corridors
-  </a>
-  
-    <nav class="md-nav" aria-label="Shafts and Corridors">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#corridor-evaluation" class="md-nav__link">
     Corridor evaluation
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#improvements" class="md-nav__link">
     Improvements
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1019,20 +999,26 @@
               
                 
                 
-                  <h1>Shafts and Corridors</h1>
-                
-                <h2 id="shafts-and-corridors">Shafts and Corridors</h2>
+                <h1 id="shaft-and-corridor-placement">Shaft and Corridor placement</h1>
 <p>The shafts and corridors have been generated in a way that each floor has a network of corridors without any dead ends. </p>
-<p><img src="https://cdn.discordapp.com/attachments/784009094474366977/803363005420011520/depth_analysis_graphTekengebied_1.png"></p>
+<p><center><img src="https://cdn.discordapp.com/attachments/784009094474366977/803363005420011520/depth_analysis_graphTekengebied_1.png"></p>
 <p><img src="https://media.discordapp.net/attachments/784009094474366977/803363007136137216/depth_analysis_legendTekengebied_1.png" style="width:400px;"></p>
+<p><em>depth analysis</em>
+</center></p>
 <p>As is shown in the depth analysis (a translation of the topological map, with the focus on connections to the street) it can be seen that all public functions have their own entrance, all communal functions are connected to the community centre and all housing functions are connected to the housing entrance. For this corridor generation these two connection-groups are the connections that are being used. Other connections are considered secondary, and are therefore not taken into account. 
 The division in functions (housing entrance and communal entrance) corresponds with the initial location of the functions, where all communal functions are located on the first two floors and the housing functions, along with the co-working spaces and the start-up offices, grow above this. This results in two types of corridor networks; one connecting all communal functions and all shafts to upper floors, and one connecting all functions that grow on the upper floors, along with the shafts.
 For the growth of the communal corridors, the initial seeds of these functions are being placed. Because the location of the shafts is more related to the location of the entrances than it is to the seeds of the voxels, the shafts are located based on these entrance locations.</p>
-<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/6.3_shafts.png?raw=true"></p>
+<p><center><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/6.3_shafts.png?raw=true"></p>
+<p><em>shaft locations based on entrances</em> 
+</center></p>
 <p>Instead of using the shafts as connections towards each seed, a list of each function seed is used. The shaft locations are then added to this list, and after generating a distance matrix the shortest path between each function in this list is then calculated. These shortest paths are calculated in a two-dimensional plane, and are then copied to all corresponding levels; voxels 1, 2 and 3 for the groundfloor level and voxels 4 and 5 for the second floor. </p>
-<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/5.1_corridors_groundfloor.png?raw=true"></p>
+<p><center><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/5.1_corridors_groundfloor.png?raw=true"></p>
+<p><em>corridors communal functions</em> 
+</center></p>
 <p>The same steps are being taken for the higher level functions, but in addition the height of the corridors is limited by the length of the shaft that it is connected to. This because the length of the shaft determines whether or not the floor is accessible. </p>
-<p><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/6.4_shafts_and_corridors.png?raw=true"></p>
+<p><center><img src="https://github.com/EdaAkaltun/spatial_computing_project_template/blob/master/docs/img/finalscreenshots/6.4_shafts_and_corridors.png?raw=true"></p>
+<p><em>corridors upper floors</em>
+</center></p>
 <h3 id="corridor-evaluation">Corridor evaluation</h3>
 <p>Because the corridors are all connected, they limit the abm growth by enclosing voxel seeds and therefore we turned them off in this simulation. The location of the shafts led to the corridors growing along the border of the available voxels, occupying valuable space in the building.  The shafts itself are also along the border, but this is a design question that does not have a straightforward answer, as shaft locations differ in each building design. For this situation, a placement along the border had been chosen to minimize walking distance within the building. </p>
 <h3 id="improvements">Improvements</h3>
