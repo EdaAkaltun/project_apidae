@@ -435,8 +435,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sun-and-skylight" class="md-nav__link">
-    Sun and Skylight
+  <a href="#shadow-and-skylight-blocking" class="md-nav__link">
+    Shadow and Skylight blocking
   </a>
   
 </li>
@@ -932,8 +932,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sun-and-skylight" class="md-nav__link">
-    Sun and Skylight
+  <a href="#shadow-and-skylight-blocking" class="md-nav__link">
+    Shadow and Skylight blocking
   </a>
   
 </li>
@@ -980,7 +980,7 @@
                 
                 <h1 id="designing-the-growth-lattice">designing the growth lattice</h1>
 <p>For generating the final building, not all voxels are appropriate to use. In this simulation, the growth lattice is being limited by two factors. With generating the building the surroundings are taken into account, and decided is that the building may not cast too much shadow to buildings in the surrounding. Next to that, a limit on the used ground floor space is asked, as 30% of the plot should be reserved for greenery.</p>
-<h3 id="sun-and-skylight">Sun and Skylight</h3>
+<h3 id="shadow-and-skylight-blocking">Shadow and Skylight blocking</h3>
 <p>Based on the ladybug sunpath the shadow envelope is calculated. To do so a ray is cast from the centroids of all the voxel that have received sun, towards the context. If the ray does not intersect the context, then the voxel does not cast a shadow. The shadow envelope is then interpolated to a highres value. </p>
 <p>For Skylight blocking all these steps are repeated, but instead of loading a sunpath, a sphere is created to represent the sky. Instead of shooting rays towards the sunpoints, the rays are being shot to the skypoints. </p>
 <p><center><img src="https://media.discordapp.net/attachments/785803868356476958/803590073899155456/shadow_and_skylight_blocking.jpg?width=948&height=670"></p>
